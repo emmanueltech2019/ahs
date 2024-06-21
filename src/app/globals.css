@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero{
+    background-image: url(./components/assets/images/image\ 1.png);
+    background-size: cover;
+    background-position: right -130px top;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.get-inTouch{
+    background-image: url(./components/assets/images/pexels-fr3nks-305568\ 1.png);
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    .hero{
+        background-position: center;
+    }
+}
+
+.customDatePicker input {
+    padding: none;
+    border: none;
+    /* border-radius: 5px; */
+  }
+
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+    gap: 2rem;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  .dot-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
