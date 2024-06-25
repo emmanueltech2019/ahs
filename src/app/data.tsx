@@ -12,7 +12,7 @@ const data:Data ={
     state:"TX",
     domain: "austinherniaspecialists.com",
     logo: 'https://res.cloudinary.com/wise-solution-inc/image/upload/v1718988263/logo_1_g8cfch.png',
-    src:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96573.51215796186!2d-73.92333479996579!3d40.85163068356635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28b553a697cb1%3A0x556e43a78ff15c77!2sBronx%2C%20NY%2C%20USA!5e0!3m2!1sen!2sng!4v1718807214634!5m2!1sen!2sng"
+    src:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d440897.58384175313!2d-98.08540382088617!3d30.30794064095694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX%2C%20USA!5e0!3m2!1sen!2sng!4v1718989574410!5m2!1sen!2sng"
 
 }
 

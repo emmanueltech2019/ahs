@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
     <>
     <div
       className=" text-white p-8 relative bg-cover bg-center center h-fit"
-      style={{ backgroundImage: 'url(https://res.cloudinary.com/wise-solution-inc/image/upload/v1718121485/footer-design_gexz65.png)' }}
+      style={{ backgroundImage: 'url(https://res.cloudinary.com/wise-solution-inc/image/upload/v1719332763/pexels-pixabay-269077_1_hsaxys.png)' }}
     >
       <div className=" bg-opacity-75 p-8">
         <div className="max-w-7xl mx-auto">

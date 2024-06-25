@@ -1,12 +1,65 @@
-import React from 'react';
+"use client"
+import React, { FormEvent, useState } from 'react';
 import { Icon } from '@iconify/react';
 import data from './data';
 import Link from 'next/link';
+import axios from 'axios';
+import Swal from 'sweetalert2'
+
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.onmouseenter = Swal.stopTimer;
+    toast.onmouseleave = Swal.resumeTimer;
+  }
+});
 export default function Home() {
   const embedSrc = "https://sketchfab.com/models/48ee970a23964b59b9c85d06fff540f6/embed";
   const modelUrl = "https://sketchfab.com/3d-models/rt-inguinal-hernia-containing-the-bladder-48ee970a23964b59b9c85d06fff540f6?utm_medium=embed&utm_campaign=share-popup&utm_content=48ee970a23964b59b9c85d06fff540f6";
   const authorUrl = "https://sketchfab.com/tl0615?utm_medium=embed&utm_campaign=share-popup&utm_content=48ee970a23964b59b9c85d06fff540f6";
 
+
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
+  const [type, setType] = useState("")
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('https://api-14hs.devemmy.com/appointments',{name, email, type, phone, brand:data.brand},{
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+      } ).then(()=>{
+         Toast.fire({
+          icon: "success",
+          text: "We would reach out to you shortly",
+          timer: 2000
+        }).then(()=>{
+          setName("")
+          setEmail("")
+          setPhone("")
+          setType("")
+        })
+      })
+    } catch (error: any) {
+      Toast.fire({
+        icon: "error",
+        text:"unsuccessful",
+        timer: 2000
+      })
+      .then(()=>{
+        // window.location.reload();
+      })
+      // Handle login errors (e.g., invalid credentials)
+      // console.error('Login error:', error.response?.data); 
+      // setError(error.response?.data.message || 'An error occurred.');
+    }
+  };
   return (
     <div>
       <section className="hero bg-[#00000058] bg-blend-overlay">
@@ -173,26 +226,26 @@ export default function Home() {
               <h2 className='text-[#449DD1] font-bold text-[23px] md:text-[26px]'>Get In Touch</h2>
               <p>Improve the quality if your life</p>
             </header>
-            <form className='bg-transparent grid grid-cols-2 gap-4'>
+            <form className='bg-transparent grid grid-cols-2 gap-4' onSubmit={handleSubmit}>
               <div className="name col-span-2 border p-3 rounded-xl">
-                <input type="text" placeholder='Name' className='w-full outline-none border-0' />
+                <input type="text" required value={name} onChange={(e)=>setName(e.target.value)} placeholder='Name' className='w-full outline-none border-0' />
               </div>
               <div className="email border p-3 rounded-xl col-span-1">
-                <input type="email" placeholder='Email' className='w-full outline-none border-0' />
+                <input type="email" required value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='Email' className='w-full outline-none border-0' />
               </div>
               <div className="phone border p-3 rounded-xl col-span-1">
-                <input type="tel" placeholder='Phone' className='w-full outline-none border-0' />
+                <input type="tel" placeholder='Phone' required value={phone} onChange={(e)=>setPhone(e.target.value)} className='w-full outline-none border-0' />
               </div>
               <div className='col-span-2 border p-3 rounded-xl'>
-                <select name="reason-for-contact" id="reason" title="res" className='outline-none border-none'>
-                  <option value="reason1" selected>Reason for contact</option>
+                <select name="reason-for-contact" id="reason" required value={type} onChange={(e)=>setType(e.target.value)} title="res" className='outline-none border-none'>
+                  <option value="" selected>Select Reason for contact</option>
                   <option value="surgery-appointment">Surgery Appointment</option>
                   <option value="in-house-appointment">In-house Appointment</option>
-                  <option value="other">Other</option>
+                  <option value="others">Others</option>
                 </select>
               </div>
               <div className="submit col-span-2 border p-3 rounded-full text-center text-[#fff] bg-[#449DD1]">
-                <button>SUBMIT</button>
+                <button type='submit'>SUBMIT</button>
               </div>
             </form>
           </div>
