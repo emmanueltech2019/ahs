@@ -84,7 +84,7 @@ function Page() {
           <div className="form bg-[#FFF] w-[350px] m-auto p-4 rounded-lg relative  top-[100px] md:left-[-30%] shadow-md">
             <header className='text-center'>
               <h2 className='text-[#449DD1] font-bold text-[23px] md:text-[26px]'>Get In Touch</h2>
-              <p className="my-6">With Choudry</p>
+              <p className="my-6">With Dr. Choudhry</p>
             </header>
             <form className='bg-transparent grid grid-cols-2 gap-4'>
               <div className="name col-span-2 border p-3 rounded-xl">
