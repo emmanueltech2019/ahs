@@ -46,8 +46,8 @@ function Page() {
                 <p className="font-[500] flex items-center gap-2 md:text-[20px]">Surgeon</p>
               </header>
               <div className="rating">
-                <small className="text-[8px] md:text-[12px] font-bold">Rating 5.3</small>
-                <div className="flex items-center md:text-[12px]">
+                <small className="text-[8px] md:text-[15px] font-bold">Rating 5.0</small>
+                <div className="flex items-center md:text-[15px]">
                   <Icon icon="material-symbols:star" className="text-[10px] text-[#eae249]"></Icon>
                   <Icon icon="material-symbols:star" className="text-[10px] text-[#eae249]"></Icon>
                   <Icon icon="material-symbols:star" className="text-[10px] text-[#eae249]"></Icon>
@@ -287,9 +287,9 @@ function Page() {
                 <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
               </div>
               <div className="review text-[14px] md:text-[18px]">
-                <h2 className="font-bold my-[.5rem]">Steven Weitzman</h2>
+                <h2 className="font-bold my-[.5rem]">Jessica A</h2>
                 <p>
-                  &quot;I was very happy with the hernia procedure that Dr Choudry performed. He explained everything to me and spent a lot of time going over the surgery. No pain no side affects and a fast recovery. I highly recommend him. &quot;
+                I saw Dr. Choudhry last month for a hernia repair. I was quite impressed with his bedside manners and how attentive he was with me. I had questions and he had answers. There was never a time were I felt that his quality of care was anything less than excellent!! He is by far one of the best doctors I have encountered!!
                 </p>
               </div>
             </SwiperSlide>
@@ -302,9 +302,9 @@ function Page() {
                 <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
               </div>
               <div className="review text-[14px] md:text-[18px]">
-                <h2 className="font-bold my-[.5rem]">Steven Weitzman</h2>
+                <h2 className="font-bold my-[.5rem]">C S</h2>
                 <p>
-                  &quot;I was very happy with the hernia procedure that Dr Choudry performed. He explained everything to me and spent a lot of time going over the surgery. No pain no side affects and a fast recovery. I highly recommend him. &quot;
+                Schedule an appointment with dr. Choudrhy for a bilateral inguinal hernia. The pre-op consultation was quick, to the point and the doctor answered all the questions I had regarding the procedure. The surgery itself went smooth and I had no complaints with dr. Choudry services or the pricing... The hospital on the other hand is a different review.
                 </p>
               </div>
             </SwiperSlide>
