@@ -36,7 +36,7 @@ function Page() {
       <section className="doctor">
         <div className="md:max-w-[85%] m-auto pt-[6rem] p-4 pb-[6rem] ">
           <header className="bg-[#fff] w-[95%] lg:w-[50%] m-auto left-[11px] lg:left-[24%] flex gap-1 md:gap-[1rem] md:items-center shadow-md absolute top-[230px] py-3 px-[1rem]  text-[#000]">
-            <div className="doc-img w-[130px] md:w-[230px] h-[130px] md:h-[230px]">
+            <div className="doc-img w-[130px] md:w-[230px] h-[90px] md:h-[230px]">
               <Image src={docImg} className="rounded-full w-full h-full" alt="alt" />
             </div>
 
@@ -70,8 +70,8 @@ function Page() {
               </div>
             </div>
           </header>
-          <div className="pt-[12vh] flex justify-center">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13763.986941897567!2d-97.7039637!3d30.4078345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644cea00a3afa9d%3A0xfcf0dc2201bf30ab!2sNorthStar%20Surgery%20Specialists%2C%20PA!5e0!3m2!1sen!2sng!4v1719840366977!5m2!1sen!2sng" width="80%" height="250" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <div className="md:pt-[12vh] pt-[4vh] flex justify-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13763.986941897567!2d-97.7039637!3d30.4078345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644cea00a3afa9d%3A0xfcf0dc2201bf30ab!2sNorthStar%20Surgery%20Specialists%2C%20PA!5e0!3m2!1sen!2sng!4v1719840366977!5m2!1sen!2sng" width="100%" height="250" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div className="info gap-8 justify-between md:mt-[2rem] md:w-[80%] m-auto">
             <h1 className="text-[#449DD1] font-bold text-[20px] md:text-[30px]">About Dr. Choudhry</h1>
