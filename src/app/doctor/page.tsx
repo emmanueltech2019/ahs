@@ -20,7 +20,7 @@ import smallImg from './img/image copy 3.png'
 import mastectomyImg from './img/image copy 2.png'
 import colonImg from './img/image copy.png'
 import endoscopyImg from './img/image.png'
-
+import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 
 function Page() {
 
@@ -35,18 +35,18 @@ function Page() {
 
       <section className="doctor">
         <div className="md:max-w-[85%] m-auto pt-[6rem] p-4 pb-[6rem] ">
-          <header className="bg-[#fff] w-[95%] lg:w-[50%] m-auto left-[11px] lg:left-[24%] flex gap-1 md:gap-[2rem] md:items-center shadow-md absolute top-[230px] py-3 px-[1rem] rounded-full text-[#000]">
+          <header className="bg-[#fff] w-[95%] lg:w-[50%] m-auto left-[11px] lg:left-[24%] flex gap-1 md:gap-[1rem] md:items-center shadow-md absolute top-[230px] py-3 px-[1rem]  text-[#000]">
             <div className="doc-img w-[130px] md:w-[230px] h-[130px] md:h-[230px]">
               <Image src={docImg} className="rounded-full w-full h-full" alt="alt" />
             </div>
 
             <div className="doc-stat flex flex-col gap-[1rem]">
               <header className="leading-[6mm] md:leading-[10mm]">
-                <h1 className="text-[#449DD1] font-bold text-[20px] md:text-[30px]">Vinnet Choudry, MD</h1>
-                <p className="font-[500] flex items-center gap-2 md:text-[20px]">Surgeon</p>
+                <h1 className="text-[#449DD1] font-bold text-[20px] md:text-[25px]">Vineet Choudry, MD</h1>
+                <p className="font-[500] flex items-center p-0 m-0  md:text-[15px]">Surgeon</p>
               </header>
-              <div className="rating">
-                <small className="text-[8px] md:text-[15px] font-bold">Rating 5.0</small>
+              <div className="rating flex ">
+                <small className="text-[7px] md:text-[12px] font-bold pr-3">Rating 5.0</small>
                 <div className="flex items-center md:text-[15px]">
                   <Icon icon="material-symbols:star" className="text-[10px] text-[#eae249]"></Icon>
                   <Icon icon="material-symbols:star" className="text-[10px] text-[#eae249]"></Icon>
@@ -56,17 +56,24 @@ function Page() {
                 </div>
               </div>
               <div className="location">
-                <p className="text-[8px] md:text-[14px] font-bold ">{data.city}, {data.state}</p>
+                <p className="text-[7px] md:text-[11px] ">Surgeon in {data.city}, {data.state}</p>
               </div>
 
               <div className="flex gap-[2rem]">
-                <p className="flex items-center gap-2 md:text-[18px]">Certified <Icon icon="ph:seal-check-fill" className="text-[#379c4a]"></Icon></p>
-                <p className="flex items-center gap-2 md:text-[18px]">Accepting new patients <Icon icon="mdi:briefcase" className="text-[#747272]"></Icon></p>
+                <p className="flex items-center gap-2 md:text-[18px]"> <Icon icon="ph:seal-check-fill" className="text-[#379c4a]"></Icon>Certified</p>
+                <p className="flex items-center gap-2 md:text-[18px]"><Icon icon="mdi:briefcase" className="text-[#747272]"></Icon>Accepting new patients </p>
+              </div>
+              <hr/>
+              <div>
+                <p className="text-[12px]"><PlaceOutlinedIcon/>2217 Park Bend Dr Suite 220, Austin, TX 78758, United States</p>
+                
               </div>
             </div>
           </header>
-
-          <div className="info gap-8 justify-between md:mt-[7rem] md:w-[80%] m-auto">
+          <div className="pt-[12vh] flex justify-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13763.986941897567!2d-97.7039637!3d30.4078345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644cea00a3afa9d%3A0xfcf0dc2201bf30ab!2sNorthStar%20Surgery%20Specialists%2C%20PA!5e0!3m2!1sen!2sng!4v1719840366977!5m2!1sen!2sng" width="80%" height="250" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div className="info gap-8 justify-between md:mt-[2rem] md:w-[80%] m-auto">
             <h1 className="text-[#449DD1] font-bold text-[20px] md:text-[30px]">About Dr. Choudhry</h1>
             <p className="text-[15px] font-[500] leading-[8mm] md:w-[80%]">
               Vineet Choudhry was born near Chicago and has lived in various places growing up such as Kansas City and San Francisco. However, he moved to Ft. Worth, Texas in 1984 and now considers himself a native Texan.
@@ -123,7 +130,7 @@ function Page() {
           <div className="hernias">
             <div className="inguinal md:flex flex-row-reverse gap-4">
               <div>
-                <Image src={inguinalImg} alt="alt" />
+                <Image src={'https://res.cloudinary.com/wise-solution-inc/image/upload/v1719851207/inguinal-hernia_p6n6lc.png'} width={600} height={100} alt="Inguinal Hernia" />
               </div>
 
               <div className="text md:w-[50%]">
@@ -137,7 +144,7 @@ function Page() {
 
             <div className="inguinal my-[4rem] md:flex gap-4">
               <div >
-                <Image src={hiatalImg} alt="alt" />
+                <Image src={`https://res.cloudinary.com/wise-solution-inc/image/upload/v1719852288/haital-hernia_j1nqeu.png`} width={400} height={100} alt="alt" />
               </div>
 
               <div className="text md:w-[50%]">
@@ -151,7 +158,7 @@ function Page() {
 
             <div className="inguinal md:flex flex-row-reverse gap-4">
               <div>
-                <Image src={umblicalImg} alt="alt" />
+                <Image src={'https://res.cloudinary.com/wise-solution-inc/image/upload/v1719852288/umblical-hernia_bt2zm6.png'} width={400} height={100} alt="alt" />
               </div>
 
               <div className="text md:w-[50%]">
