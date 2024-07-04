@@ -116,7 +116,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ modal, setModal }) => {
               ))}
             </ul>
           ) : (
-            <p>No doctors found.</p>
+            <p className='md:px-28 py-10'>No doctors found.</p>
           )}
         </div>
       </section>
