@@ -5,6 +5,7 @@ import data from './data';
 import Link from 'next/link';
 import axios from 'axios';
 import Swal from 'sweetalert2'
+import ImageOrbit from './components/3d/ImageOrbit';
 
 
 const Toast = Swal.mixin({
@@ -95,7 +96,7 @@ export default function Home() {
       </section>
       
 
-      <section className='bg-[#fff] relative'>
+      {/* <section className='bg-[#fff] relative'>
         <div className='md:max-w-[85%] m-auto p-4'>
           <header className='bg-[#fff] w-[95%] lg:w-[60%] m-auto left-[11px] lg:left-[20%] grid grid-cols-2 md:grid-cols-4 gap-3 shadow-md absolute top-[-50px] py-8 px-[2rem] rounded-full text-[#000]'>
             <div className="location p-2 rounded-full bg-[#ddd]">
@@ -158,7 +159,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="risk bg-[#f4f4f4]">
         <div className='md:max-w-[85%] m-auto py-8 pb-[6rem]'>
@@ -203,13 +204,13 @@ export default function Home() {
               </div>
 
               <div className="text p-4 font-[500] md:w-[80%]">
-                <h1 className='font-bold text-[18px]'>Condition</h1>
+                <h5 className='font-bold text-[18px]'>Condition</h5>
                 <p>
                   An incarcerated hernia can cut off blood flow to part of your intestine. Strangulation can lead to the death of the affected bowel tissue. A strangulated hernia is life-threatening and requires immediate surgery.
                   <br />
                   <br />
                   </p>
-                  <h1 className='font-bold text-[18px]'>Symptoms</h1>
+                  <h5 className='font-bold text-[18px]'>Symptoms</h5>
                   <p>
                   Symptoms of a strangulated hernia can include severe pain, nausea, vomiting, and fever. In some cases, a hernia can be gently pushed back into place, but a strangulated hernia requires surgery to repair.
                 </p>
@@ -223,7 +224,7 @@ export default function Home() {
         <div className='md:max-w-[85%] m-auto p-4 md:pb-[4rem]'>
           <div className="form bg-[#FFF] w-[350px] m-auto p-4 rounded-lg relative  top-[100px] md:left-[-30%] shadow-md">
             <header className='text-center'>
-              <h2 className='text-[#449DD1] font-bold text-[23px] md:text-[26px]'>Get In Touch</h2>
+              <h5 className='text-[#449DD1] font-bold text-[23px] md:text-[26px]'>Get In Touch</h5>
               <p>Improve the quality if your life</p>
             </header>
             <form className='bg-transparent grid grid-cols-2 gap-4' onSubmit={handleSubmit}>
@@ -255,33 +256,20 @@ export default function Home() {
       <section className='do-you-need'>
         <div className='md:max-w-[85%] m-auto p-4'>
           <header className='py-[3rem]'>
-            <h2 className='text-[#449DD1] text-[20px] md:text-[30px] font-extrabold text-center md:w-[40%] m-auto'>
+            <h3 className='text-[#449DD1] text-[30px] md:text-[30px] font-extrabold text-center md:w-[40%] m-auto'>
               Do You Need a Hernia Specialist?
-            </h2>
+            </h3>
           </header>
 
           <div className="hernias">
             <div className="inguinal md:flex flex-row-reverse gap-4">
-              <div>
-                {/* <Image src={inguinalImg} alt="alt" /> */}
-                <div className="sketchfab-embed-wrapper w-[500px]">
-      <iframe 
-        title="Inguinal hernia"
-        src={embedSrc}
-        allowFullScreen
-        allow="autoplay; fullscreen; xr-spatial-tracking"
-        className='w-[500px] h-[300px]'
-      />
-      {/* <p style={{ fontSize: '13px', fontWeight: 'normal', margin: '5px', color: '#4A4A4A' }}>
-        <a href={modelUrl} target="_blank" rel="nofollow" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>
-          RT inguinal hernia containing the bladder
-        </a> by <a href={authorUrl} target="_blank" rel="nofollow" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>tl0615</a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=48ee970a23964b59b9c85d06fff540f6" target="_blank" rel="nofollow" style={{ fontWeight: 'bold', color: '#1CAAD9' }}>Sketchfab</a>
-      </p> */}
-    </div>
+            <div className="md:w-[50vw] md:h-[50vh]">
+                  <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1719851207/inguinal-hernia_p6n6lc.png"/>
+               
               </div>
 
               <div className="text md:w-[50%]">
-                <h2 className='my-4 font-bold text-[20px]'>Inguinal Hernia</h2>
+                <h5 className='my-4 font-bold text-[20px]'>Inguinal Hernia</h5>
                 <p className='font-[500] text-[#000000a4]'>
                   Inguinal hernias are the most common type of hernia encountered. They occur in women but occur more commonly in males. About 1 in 4 males will have an inguinal hernia at some point in their lifetime. The testicle descending from the abdomen into the scrotum predisposes males to have a natural weakness in the groin where inguinal hernias occur.
                 </p>
@@ -293,14 +281,13 @@ export default function Home() {
 
 
             <div className="inguinal my-[4rem] md:flex gap-4">
-              <div >
-              <iframe src="https://human.biodigital.com/view?id=production/maleAdult/hiatal_hernia&lang=en&ref=share" width="500" height="400" frameBorder="0"></iframe>
-
-                {/* <Image src={hiatalImg} alt="alt" /> */}
+            <div className="md:w-[50vw] md:h-[50vh]">
+                  <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1719852288/haital-hernia_j1nqeu.png"/>
+               
               </div>
 
               <div className="text md:w-[50%]">
-                <h2 className='my-4 font-bold text-[20px]'>Hiatal Hernia</h2>
+                <h5 className='my-4 font-bold text-[20px]'>Hiatal Hernia</h5>
                 <p className='font-[500] text-[#000000a4]'>
                   Hiatal hernias typically occur later in life and cause a myriad of symptoms. Symptoms may include heartburn, nausea, vomiting, regurgitation, abdominal pain, chest pain, difficulty swallowing, bloating, belching, or coughing. The term hiatal comes from hiatus (or opening), specifically the esophageal hiatus.
                 </p>
@@ -312,25 +299,13 @@ export default function Home() {
             </div>
 
             <div className="inguinal md:flex flex-row-reverse gap-4">
-              {/* <div>
-                <Image src={umblicalImg} alt="alt" />
-              </div> */}
-          <div className="md:m-auto">
-                    <div className="md:pr-8 rounded-lg">
-                      {/* <iframe
-                        className="md:h-[320px] md:w-[590px] w-screen h-[50vh]"
-                        src="https://www.youtube.com/embed/Oxar0r6-HEU"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                      ></iframe> */}
-                                    <iframe src="https://human.biodigital.com/view?id=production/maleAdult/umbilical_ventral_hernia&lang=en&ref=share" width="500" height="400" frameBorder="0"></iframe>
+            <div className="md:w-[50vw] md:h-[50vh]">
+                  <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1720021228/umblical-removebg-preview_pupiag.png"/>
+               
+              </div>
 
-                    </div>
-                  </div>
               <div className="text md:w-[50%]">
-                <h2 className='my-4 font-bold text-[20px]'>Umbilical Hernia</h2>
+                <h5 className='my-4 font-bold text-[20px]'>Umbilical Hernia</h5>
                 <p className='font-[500] text-[#000000a4]'>
                   Umbilical hernias are one of the most common hernias encountered. They are naturally occurring hernias, common in all ages from infants to the elderly. They occur at the navel, also known as the umbilicus. This is the site that the umbilical cord previously passed through and acts as a natural site of weakness in the abdominal wall.
                 </p>
@@ -345,25 +320,25 @@ export default function Home() {
       <section >
         <div className='md:max-w-[85%] m-auto p-4 py-[6rem]'>
           <header>
-            <h2 className='uppercase text-[#449DD1] text-[20px] md:text-[30px] font-extrabold text-center w-[50%] md:w-[30%] m-auto my-[2rem]'>
+            <h4 className='uppercase text-[#449DD1] text-[30px] md:text-[30px] font-extrabold text-center w-[50%] md:w-[30%] m-auto my-[2rem]'>
             {data.city} HERNIA SPECIALISTS
-            </h2>
+            </h4>
 
           </header>
 
           <div className="cards md:flex gap-7">
             <div className='p-7 shadow-xl rounded-xl'>
-              <h2 className='text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4'>
+              <h5 className='text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4'>
                 How Do I Know If My Hernia Needs Surgery?
-              </h2>
+              </h5>
               <p className='text-[13px] md:text-[16px]'>
                 A hernia is a common but frequently misunderstood condition. You may have a hernia if you have swelling and a bulge that is able to be “pushed back” into your abdomen. If it continues to grow, you will need to have hernia surgery in order to repair it.
               </p>
             </div>
             <div className='p-7 shadow-xl rounded-xl'>
-              <h2 className='text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4'>
+              <h5 className='text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4'>
               How Long Does a Hernia Operation Take?
-              </h2>
+              </h5>
               <p className='text-[13px] md:text-[16px]'>
               The operation usually takes about 30 to 45 minutes to complete and you&apos;ll usually be able to go home on the same day. Some people stay in hospital overnight if they have other medical problems or live on their own.
               </p>

@@ -78,12 +78,12 @@ function Page() {
                                         <p className='md:w-[30%]'>info@{data.domain}</p>
                                     </Link>
                                 </div>
-                                <div className="phone">
+                                {/* <div className="phone">
                                     <p className='text-[14px] leading-[25px]'>Phone:</p>
                                     <Link href="#">
                                         <p className='text-[18px]'>+00000000000</p>
                                     </Link>
-                                </div>
+                                </div> */}
                             </div>
                             <div className='mr-10'>
                                 <iframe

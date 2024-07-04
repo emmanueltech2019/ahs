@@ -27,7 +27,7 @@ function page() {
           Who we are
           </h2>
           <p className='font-[500] text-[#000000a4]'>
-          Welcome to XHS ({data.city} hernia specialists), your trusted resource for finding top-rated hernia specialists near you. We understand that dealing with a hernia can be challenging and finding the right specialist is crucial for your health and peace of mind. Our mission is to make this process as simple and efficient as possible. we are dedicated to connecting hernia patients with experienced and qualified specialists in their area
+          Welcome to {data.brand} ({data.city} hernia specialists), your trusted resource for finding top-rated hernia specialists near you. We understand that dealing with a hernia can be challenging and finding the right specialist is crucial for your health and peace of mind. Our mission is to make this process as simple and efficient as possible. we are dedicated to connecting hernia patients with experienced and qualified specialists in their area
           </p>
         </div>
       </div>
