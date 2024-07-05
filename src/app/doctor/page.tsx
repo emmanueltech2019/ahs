@@ -21,6 +21,7 @@ import mastectomyImg from './img/image copy 2.png'
 import colonImg from './img/image copy.png'
 import endoscopyImg from './img/image.png'
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
+import ImageOrbit from "../components/3d/ImageOrbit";
 
 function Page() {
 
@@ -129,8 +130,9 @@ function Page() {
 
           <div className="hernias">
             <div className="inguinal md:flex flex-row-reverse gap-4">
-              <div>
-                <Image src={'https://res.cloudinary.com/wise-solution-inc/image/upload/v1719851207/inguinal-hernia_p6n6lc.png'} width={600} height={100} alt="Inguinal Hernia" />
+            <div className="md:w-[50vw] md:h-[50vh]">
+                  <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1719851207/inguinal-hernia_p6n6lc.png"/>
+               
               </div>
 
               <div className="text md:w-[50%]">
@@ -143,8 +145,9 @@ function Page() {
 
 
             <div className="inguinal my-[4rem] md:flex gap-4">
-              <div >
-                <Image src={`https://res.cloudinary.com/wise-solution-inc/image/upload/v1719852288/haital-hernia_j1nqeu.png`} width={400} height={100} alt="alt" />
+            <div className="md:w-[50vw] md:h-[50vh]">
+                  <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1719852288/haital-hernia_j1nqeu.png"/>
+               
               </div>
 
               <div className="text md:w-[50%]">
@@ -157,8 +160,9 @@ function Page() {
             </div>
 
             <div className="inguinal md:flex flex-row-reverse gap-4">
-              <div>
-                <Image src={'https://res.cloudinary.com/wise-solution-inc/image/upload/v1719852288/umblical-hernia_bt2zm6.png'} width={400} height={100} alt="alt" />
+            <div className="md:w-[50vw] md:h-[50vh]">
+                  <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1720021228/umblical-removebg-preview_pupiag.png"/>
+               
               </div>
 
               <div className="text md:w-[50%]">
