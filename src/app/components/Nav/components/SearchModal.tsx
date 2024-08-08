@@ -53,12 +53,11 @@
 
 
 
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 interface Doctor {
-  Name: string;
-  Specialization: string;
-  Location: string;
+  name: string;
 }
 
 interface SearchModalProps {
@@ -66,18 +65,41 @@ interface SearchModalProps {
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+
+
 const SearchModal: React.FC<SearchModalProps> = ({ modal, setModal }) => {
-  const [doctors, setDoctors] = useState<Doctor[]>([
-    { Name: "Dr. Vineet Choudhry", Specialization: "Cardiologist", Location: "Austin" },
-    { Name: "Dr. Cristina Muresanu", Specialization: "Dermatologist", Location: "Austin" },
-    // { Name: "Dr. Kim", Specialization: "Pediatrician", Location: "Chicago" },
-    // ... more doctors
-  ]);
+  const [doctors, setDoctors] = useState<Doctor[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredDoctors = doctors.filter(doctor =>
-    doctor.Name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredDoctors = React.useMemo(() => {
+    return doctors.filter(doctor => doctor.name?.toLowerCase().includes(searchTerm.toLowerCase()));
+  }, [doctors, searchTerm]);
+
+  const getDoctorDetails  = async () =>{
+    await axios({
+      method:"get",
+      url:"http://localhost:4000/user/get-doctor"
+    })
+    .then((res)=>{
+      console.log("Worked.....", res.data[0])
+      setDoctors(res.data)
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
+const handleChange = (e: any) =>{
+  setSearchTerm(e.target.value)
+  console.log(doctors)
+  getDoctorDetails()
+  // filteredDoctors = doctors.map(doctor =>
+  //   console.log( doctors[0].name)
+   
+  // );
+}
+useEffect(() => {
+  // getDoctorDetails()
+  
+}, [])
 
   const handleModal = () => setModal(!modal);
 
@@ -99,7 +121,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ modal, setModal }) => {
             <input 
               type="text" 
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) => handleChange(e)}
               placeholder='Search...' 
               className='w-full outline-none p-1 text-[18px]' 
             />
@@ -107,18 +129,19 @@ const SearchModal: React.FC<SearchModalProps> = ({ modal, setModal }) => {
         </div>
 
         <div className="display-search h-[100vh]">
-          {filteredDoctors.length > 0 ? (
-            <ul className='md:px-24'>
-              {filteredDoctors.map(doctor => (
-                <li key={doctor.Name} className='border rounded-full border-solid py-6 px-3 my-2'>
-                  {doctor.Name} ({doctor.Location})
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className='md:px-28 py-10'>No doctors found.</p>
-          )}
-        </div>
+  {filteredDoctors.length > 0 ? (
+    <ul className='md:px-24'>
+      {filteredDoctors.map(doctor => (
+        <li key={doctor.name} className='border rounded-full border-solid py-6 px-3 my-2'>
+          {doctor.name} 
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p className='md:px-28 py-10'>No doctors found.</p>
+  )}
+</div>
+
       </section>
     </div>
   );
