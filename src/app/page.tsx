@@ -6,6 +6,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import Swal from 'sweetalert2'
 import ImageOrbit from './components/3d/ImageOrbit';
+import Head from 'next/head';
 
 
 const Toast = Swal.mixin({
@@ -63,6 +64,9 @@ export default function Home() {
   };
   return (
     <div>
+      <Head>
+      <meta name="google-site-verification" content="qtF6bh1d2Fs5IN5P9-UIymEDB64u8AuQyVBbWI6dNB8" />
+      </Head>
       <section className="hero bg-[#00000058] bg-blend-overlay">
         <div className="backdrop-blur-sm">
           <div className='md:max-w-[85%] m-auto pt-[7rem] p-4 pb-[6rem] min-h-[100vh]'>
