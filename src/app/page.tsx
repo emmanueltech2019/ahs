@@ -243,7 +243,7 @@ export default function Home() {
               </div>
               <div className='col-span-2 border p-3 rounded-xl'>
                 <select name="reason-for-contact" id="reason" required value={type} onChange={(e)=>setType(e.target.value)} title="res" className='outline-none border-none'>
-                  <option value="" selected>Select Reason for contact</option>
+                  <option value="">Select Reason for contact</option>
                   <option value="surgery-appointment">Surgery Appointment</option>
                   <option value="in-house-appointment">In-house Appointment</option>
                   <option value="others">Others</option>
