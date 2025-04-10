@@ -2,7 +2,6 @@ import * as React from 'react';
 import {
   Card,
   CardContent,
-  Box,
   Typography,
   Chip,
   ToggleButtonGroup,
@@ -19,13 +18,6 @@ import {
   Area,
   AreaChart,
 } from 'recharts';
-import { SxProps, Theme } from '@mui/material/styles';
-
-const defaultBoxStyles: SxProps<Theme> = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-};
 
 const rawChartData = [
   { date: 'Feb 1', value: 48000 },
@@ -51,7 +43,7 @@ export default function HerniaPatientsChart() {
   return (
     <Card className="rounded-xl border border-solid mx-20">
       <CardContent>
-        <Box sx={defaultBoxStyles}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="h6" fontWeight="bold">
             Hernia Patients
           </Typography>
@@ -66,19 +58,19 @@ export default function HerniaPatientsChart() {
             <ToggleButton value="6M">6M</ToggleButton>
             <ToggleButton value="1Y">1Y</ToggleButton>
           </ToggleButtonGroup>
-        </Box>
+        </div>
 
-        <Box sx={{ ...defaultBoxStyles, my: 2 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '16px 0' }}>
           <Typography variant="h3" fontWeight="bold">
             52,000
           </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Chip label="+23%" style={{ backgroundColor: '#fbbf24', color: '#000' }} />
             <Typography variant="body2">vs last month</Typography>
-          </Box>
-        </Box>
+          </div>
+        </div>
 
-        <Box sx={{ height: 300 }}>
+        <div style={{ height: 300 }}>
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={rawChartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
               <defs>
@@ -100,7 +92,7 @@ export default function HerniaPatientsChart() {
               />
             </AreaChart>
           </ResponsiveContainer>
-        </Box>
+        </div>
       </CardContent>
     </Card>
   );
