@@ -7,7 +7,10 @@ import axios from 'axios';
 import Swal from 'sweetalert2'
 import ImageOrbit from './components/3d/ImageOrbit';
 import Head from 'next/head';
-
+import ChartMileStone from './components/chart-milestone/ChartMileStone';
+import Image from 'next/image';
+import HerniaPatientsChart from './components/chart/Chart';
+// import Vid from "./components/"
 
 const Toast = Swal.mixin({
   toast: true,
@@ -67,7 +70,7 @@ export default function Home() {
       <Head>
       <meta name="google-site-verification" content="qtF6bh1d2Fs5IN5P9-UIymEDB64u8AuQyVBbWI6dNB8" />
       </Head>
-      <section className="hero bg-[#00000058] bg-blend-overlay">
+      {/* <section className="hero bg-[#00000058] bg-blend-overlay">
         <div className="backdrop-blur-sm">
           <div className='md:max-w-[85%] m-auto pt-[7rem] p-4 pb-[6rem] min-h-[100vh]'>
             <header className='mt-[6.5rem]'>
@@ -97,8 +100,52 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       
+      <section className="hero relative overflow-hidden min-h-screen">
+  {/* Background Video */}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+  >
+    <source src={"https://res.cloudinary.com/wise-solution-inc/video/upload/v1744247251/Introducing_da_Vinci_5__our_most_advanced_and_integrated_robotic_system_ever._rjbljt.mp4"} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* Optional dark overlay */}
+  <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0" />
+
+  <div className="relative z-10 backdrop-blur-sm">
+    <div className="md:max-w-[85%] m-auto pt-[7rem] p-4 pb-[6rem] min-h-[100vh]">
+      <header className="mt-[6.5rem]">
+        <h1 className="md:w-[85%] text-[37px] md:text-[60px] font-bold text-white leading-10 md:leading-[18mm]">
+          Find your <br className="md:hidden" />
+          Hernia<br className="hidden md:block" />Specialists in {data.city}, {data.state}
+        </h1>
+
+        <p className="text-[#f4f4f4] md:text-[18px] md:w-[40%] my-[1.4rem]">
+          Your trusted destination for premier hernia care in {data.city} and surrounding areas.
+        </p>
+      </header>
+
+      <div className="buttons flex justify-between gap-3 text-center mt-[6rem] md:w-[40%]">
+        <div className="about-us bg-white p-2 py-3 font-bold rounded-full w-full">
+          <Link href="/about">
+            <button>About Us</button>
+          </Link>
+        </div>
+        <div className="contact-us bg-[#449DD1] text-white p-2 py-3 font-bold rounded-full w-full">
+          <Link href="/contact">
+            <button>Contact Us</button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* <section className='bg-[#fff] relative'>
         <div className='md:max-w-[85%] m-auto p-4'>
@@ -165,22 +212,22 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="risk bg-[#f4f4f4]">
+      <section className="risk bg-[#fff]">
         <div className='md:max-w-[85%] m-auto py-8 pb-[6rem]'>
           <header className='py-[3rem]'>
-            <h2 className='text-[#449DD1] text-[20px] md:text-[30px] font-extrabold text-center'>
+            <h2 className='text-[#449DD1] text-[20px] md:text-[45px] font-extrabold text-center'>
               {/* How Risky Is A Hernia */}
               WHAT IS AN HERNIA?
             </h2>
           </header>
 
           <div className='md:flex justify-center gap-[4rem]'>
-            <div className="relative md:w-[70%] hernia-list bg-[#fff] p-8 ps-[4rem] m-4 rounded-lg">
+            <div className="relative md:w-[70%] hernia-list  bg-[#f4f4f4] p-8 ps-[4rem] m-4 rounded-lg">
             <h6 className='text-[25px] font-extrabold py-5'>Top types of Hernias</h6>
               <div className="absolute left-0 bg-[#449DD1] w-[40px] h-[30px]">
 
               </div>
-              <ul className='grid gap-3 text-[#0000009b]'>
+              {/* <ul className='grid gap-3 text-[#0000009b]'>
                 <li className='text-[20px] font-extrabold'>Ingunial hernia</li>
                 <li className='text-[20px] font-extrabold'>Incisional hernia</li>
                 <li className='text-[20px] font-extrabold'>Hiatal hernia</li>
@@ -191,7 +238,27 @@ export default function Home() {
                 <li className='text-[20px] font-extrabold'>Diaphragmatic hernia</li>
                 <li className='text-[20px] font-extrabold'>Spigelian hernia</li>
                 <li className='text-[20px] font-extrabold'>Flank hernia</li>
-              </ul>
+              </ul> */}
+              <ul className="grid gap-3 text-[#0000009b]">
+                  {[
+                    'Ingunial hernia',
+                    'Incisional hernia',
+                    'Hiatal hernia',
+                    'Femoral hernia',
+                    'Ventral hernia',
+                    'Umblical hernia',
+                    'Recurrent hernia',
+                    'Diaphragmatic hernia',
+                    'Spigelian hernia',
+                    'Flank hernia',
+                  ].map((item, index) => (
+                    <li key={index} className="text-[20px] font-extrabold flex items-start gap-2">
+                      <span className="mt-2 w-2 h-2 bg-[#449DD1] rounded-full shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
             </div>
 
             <div className='mt-[1rem]'>
@@ -226,22 +293,22 @@ export default function Home() {
 
       <section className='get-inTouch relative mb-[7rem]'>
         <div className='md:max-w-[85%] m-auto p-4 md:pb-[4rem]'>
-          <div className="form bg-[#FFF] w-[350px] m-auto p-4 rounded-lg relative  top-[100px] md:left-[-30%] shadow-md">
+          <div className="form bg-[#FFF] w-[450px] m-auto p-10 rounded-lg relative  top-[100px] md:left-[-30%] shadow-md">
             <header className='text-center'>
               <h5 className='text-[#449DD1] font-bold text-[23px] md:text-[26px]'>Get In Touch</h5>
               <p>Improve the quality if your life</p>
             </header>
-            <form className='bg-transparent grid grid-cols-2 gap-4' onSubmit={handleSubmit}>
-              <div className="name col-span-2 border p-3 rounded-xl">
+            <form className='bg-transparent grid grid-cols-2 gap-4 ' onSubmit={handleSubmit}>
+              <div className="name col-span-2 border p-3 my-3 rounded-xl">
                 <input type="text" required value={name} onChange={(e)=>setName(e.target.value)} placeholder='Name' className='w-full outline-none border-0' />
               </div>
-              <div className="email border p-3 rounded-xl col-span-1">
+              <div className="email border p-3 rounded-xl my-3 col-span-1">
                 <input type="email" required value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='Email' className='w-full outline-none border-0' />
               </div>
-              <div className="phone border p-3 rounded-xl col-span-1">
+              <div className="phone border p-3 rounded-xl my-3 col-span-1">
                 <input type="tel" placeholder='Phone' required value={phone} onChange={(e)=>setPhone(e.target.value)} className='w-full outline-none border-0' />
               </div>
-              <div className='col-span-2 border p-3 rounded-xl'>
+              <div className='col-span-2 border p-3 rounded-xl my-3'>
                 <select name="reason-for-contact" id="reason" required value={type} onChange={(e)=>setType(e.target.value)} title="res" className='outline-none border-none'>
                   <option value="">Select Reason for contact</option>
                   <option value="surgery-appointment">Surgery Appointment</option>
@@ -260,7 +327,7 @@ export default function Home() {
       <section className='do-you-need'>
         <div className='md:max-w-[85%] m-auto p-4'>
           <header className='py-[3rem]'>
-            <h3 className='text-[#449DD1] text-[30px] md:text-[30px] font-extrabold text-center md:w-[40%] m-auto'>
+            <h3 className='text-[#449DD1] text-[30px] md:text-[45px] font-extrabold text-center md:w-[40%] m-auto'>
               Do You Need a Hernia Specialist?
             </h3>
           </header>
@@ -273,7 +340,7 @@ export default function Home() {
               </div>
 
               <div className="text md:w-[50%]">
-                <h5 className='my-4 font-bold text-[20px]'>Inguinal Hernia</h5>
+                <h5 className='my-4 font-bold text-[25px]'>Inguinal Hernia</h5>
                 <p className='font-[500] text-[#000000a4]'>
                   Inguinal hernias are the most common type of hernia encountered. They occur in women but occur more commonly in males. About 1 in 4 males will have an inguinal hernia at some point in their lifetime. The testicle descending from the abdomen into the scrotum predisposes males to have a natural weakness in the groin where inguinal hernias occur.
                 </p>
@@ -291,7 +358,7 @@ export default function Home() {
               </div>
 
               <div className="text md:w-[50%]">
-                <h5 className='my-4 font-bold text-[20px]'>Hiatal Hernia</h5>
+                <h5 className='my-4 font-bold text-[25px]'>Hiatal Hernia</h5>
                 <p className='font-[500] text-[#000000a4]'>
                   Hiatal hernias typically occur later in life and cause a myriad of symptoms. Symptoms may include heartburn, nausea, vomiting, regurgitation, abdominal pain, chest pain, difficulty swallowing, bloating, belching, or coughing. The term hiatal comes from hiatus (or opening), specifically the esophageal hiatus.
                 </p>
@@ -309,7 +376,7 @@ export default function Home() {
               </div>
 
               <div className="text md:w-[50%]">
-                <h5 className='my-4 font-bold text-[20px]'>Umbilical Hernia</h5>
+                <h5 className='my-4 font-bold text-[25px]'>Umbilical Hernia</h5>
                 <p className='font-[500] text-[#000000a4]'>
                   Umbilical hernias are one of the most common hernias encountered. They are naturally occurring hernias, common in all ages from infants to the elderly. They occur at the navel, also known as the umbilicus. This is the site that the umbilical cord previously passed through and acts as a natural site of weakness in the abdominal wall.
                 </p>
@@ -320,7 +387,8 @@ export default function Home() {
 
         </div>
       </section>
-
+        {/* <ChartMileStone/> */}
+        <HerniaPatientsChart/>
       <section >
         <div className='md:max-w-[85%] m-auto p-4 py-[6rem]'>
           <header>
@@ -330,8 +398,10 @@ export default function Home() {
 
           </header>
 
-          <div className="cards md:flex gap-7">
-            <div className='p-7 shadow-xl rounded-xl'>
+          <div className="cards md:flex gap-7 my-10">
+            
+            <div className=" flex items-center">
+            <div className='p-7 rounded-xl'>
               <h5 className='text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4'>
                 How Do I Know If My Hernia Needs Surgery?
               </h5>
@@ -339,7 +409,18 @@ export default function Home() {
                 A hernia is a common but frequently misunderstood condition. You may have a hernia if you have swelling and a bulge that is able to be “pushed back” into your abdomen. If it continues to grow, you will need to have hernia surgery in order to repair it.
               </p>
             </div>
-            <div className='p-7 shadow-xl rounded-xl'>
+
+            </div>
+            <div className='p-7 rounded-xl'>
+              <Image src={'https://res.cloudinary.com/wise-solution-inc/image/upload/v1744250052/ChatGPT_Image_Apr_10_2025_02_45_05_AM_ed46gd.png'} alt='Hernia Image' width={'2000'} height={'100'}/>
+            </div>
+          </div>
+          <div className="cards md:flex gap-7">
+            
+          <div className='p-7 rounded-xl'>
+              <Image src={'https://res.cloudinary.com/wise-solution-inc/image/upload/v1744251241/ChatGPT_Image_Apr_10_2025_03_02_56_AM_1_vmbroo.png'} alt='Hernia Image' width={'2000'} height={'100'}/>
+            </div>
+            <div className='p-7  rounded-xl'>
               <h5 className='text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4'>
               How Long Does a Hernia Operation Take?
               </h5>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .hero{
-    background-image: url(./components/assets/images/image\ 1.png);
+    background-image: url(./components/assets/da-vinci-vse-synchroseal-hero.avif);
     background-size: cover;
     background-position: right -130px top;
     background-repeat: no-repeat;
