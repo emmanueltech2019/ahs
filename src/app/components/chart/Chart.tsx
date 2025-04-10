@@ -20,6 +20,7 @@ const chartData = {
   ],
 };
 
+
 const defaultBoxStyles: SxProps<Theme> = {
   display: 'flex',
   justifyContent: 'space-between',
