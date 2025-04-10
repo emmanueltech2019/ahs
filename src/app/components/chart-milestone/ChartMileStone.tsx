@@ -32,7 +32,7 @@ function ChartMileStone() {
           <h2 className='text-md text-blue-900 scale-y-[-1] text-md font-bold scale-x-[-1]'>2008</h2>
           <Image src={circle} alt=''/>
           <Image className='hidden md:block' src={vertical} alt='' />
-          <p className='scale-y-[-1] scale-x-[-1] md:scale-x-1 text-start md-text-center ms-[-40px] md:ms-0 me-[50px] md:me-[0]'>Awarded Stanford's who's who and America's top surgeosm</p>
+          <p className='scale-y-[-1] scale-x-[-1] md:scale-x-1 text-start md-text-center ms-[-40px] md:ms-0 me-[50px] md:me-[0]'>Awarded Stanford&apos;s who&apos;s who and America&apos;s top surgeosm</p>
         </div>
         <div className='ttext-center flex items-center gap-5 flex-row md:flex-col translate-x-[76px] md:translate-x-0'>
           <h2 className='text-md text-blue-900 text-md font-bold'>2008</h2>
@@ -44,7 +44,7 @@ function ChartMileStone() {
           <h2 className='text-md text-blue-900 scale-y-[-1] text-md font-bold scale-x-[-1]'>2008</h2>
           <Image src={circle} alt=''/>
           <Image className='hidden md:block' src={vertical} alt=''/>
-          <p className='scale-y-[-1] scale-x-[-1] md:scale-x-1 text-start md-text-center ms-[-30px] md:ms-0 me-[50px] md:me-[0]'>Awarded Stanford's who's who and America's top surgeosm</p>
+          <p className='scale-y-[-1] scale-x-[-1] md:scale-x-1 text-start md-text-center ms-[-30px] md:ms-0 me-[50px] md:me-[0]'>Awarded Stanford&apos;s who&apos;s who and America&apos;s top surgeosm</p>
         </div>
         <div className='text-center flex items-center gap-5 flex-row md:flex-col translate-x-[76px] md:translate-x-0'>
           <h2 className='text-md text-blue-900 text-md font-bold'>2008</h2>

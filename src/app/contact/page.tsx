@@ -106,17 +106,17 @@ function Page() {
                             <form className='grid gap-[2rem] p-[6rem] shadow-2xl rounded-[2rem]' onSubmit={handleSubmit}>
                                 <div>
                                     <label className="text-[13.5px]" htmlFor="name">Name:</label><br />
-                                    <input type="text" id='name' required value={name} onChange={(e)=>setName(e.target.value)} placeholder='Micheal Collin' className='outline-none border-[1px] border-[#0000006d] bg-transparent p-[1rem] w-full rounded-full' />
+                                    <input type="text" id='name' required value={name} onChange={(e)=>setName(e.target.value)} placeholder='Micheal Collin' className='outline-none border-[1px] border-[#0000006d] bg-transparent p-[1rem] w-full rounded-[10px]' />
                                 </div>
 
                                 <div>
                                     <label className="text-[13.5px]" htmlFor="email">Email:</label><br />
-                                    <input type="email" id='email' required value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='email@example.com' className='outline-none border-[1px] border-[#0000006d] bg-transparent p-[1rem] w-full rounded-full' />
+                                    <input type="email" id='email' required value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='email@example.com' className='outline-none border-[1px] border-[#0000006d] bg-transparent p-[1rem] w-full rounded-[10px]' />
                                 </div>
 
                                 <div>
                                     <label className="text-[13.5px]" htmlFor="message">Message:</label><br />
-                                    <textarea name="comment" id="message" required value={message} onChange={(e)=>setMessage(e.target.value)} placeholder='Leave us a Message...' className='outline-none border-[1px] border-[#0000006d] bg-transparent p-[2rem] w-full rounded-full'></textarea>
+                                    <textarea name="comment" id="message" required value={message} onChange={(e)=>setMessage(e.target.value)} placeholder='Leave us a Message...' className='outline-none border-[1px] border-[#0000006d] bg-transparent p-[2rem] w-full rounded-[10px]'></textarea>
                                 </div>
 
                                 <div className='text-center '>
