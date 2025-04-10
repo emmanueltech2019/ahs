@@ -52,7 +52,9 @@ const handleRangeChange = (
   return (
     <Card className="rounded-xl border border-solid mx-20">
       <CardContent>
-        <Box display="flex" justifyContent="space-between" alignItems="center">
+        {/* <Box display="flex" justifyContent="space-between" alignItems="center"> */}
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+
           <Typography variant="h6" fontWeight="bold">Hernia Patients</Typography>
           <ToggleButtonGroup
             value={range}
