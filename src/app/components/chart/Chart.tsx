@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { LineChart } from '@mui/x-charts/LineChart';
 import { Card, CardContent, Box, Typography, Chip, ToggleButtonGroup, ToggleButton } from '@mui/material';
+import { SxProps, Theme } from '@mui/material/styles';
 
 const chartData = {
   xAxis: [
@@ -19,6 +20,12 @@ const chartData = {
   ],
 };
 
+const defaultBoxStyles: SxProps<Theme> = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+};
+
 export default function HerniaPatientsChart() {
   const [range, setRange] = React.useState<'1M' | '3M' | '6M' | '1Y'>('1M');
 
@@ -31,16 +38,10 @@ export default function HerniaPatientsChart() {
     }
   };
 
-  const boxStyles = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  };
-
   return (
     <Card className="rounded-xl border border-solid mx-20">
       <CardContent>
-        <Box sx={boxStyles}>
+        <Box sx={defaultBoxStyles}>
           <Typography variant="h6" fontWeight="bold">Hernia Patients</Typography>
           <ToggleButtonGroup
             value={range}
@@ -55,7 +56,7 @@ export default function HerniaPatientsChart() {
           </ToggleButtonGroup>
         </Box>
 
-        <Box sx={{ ...boxStyles, my: 2 }}>
+        <Box sx={{ ...defaultBoxStyles, my: 2 }}>
           <Typography variant="h3" fontWeight="bold">52,000</Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <Chip label="+23%" style={{ backgroundColor: '#fbbf24', color: '#000' }} />
