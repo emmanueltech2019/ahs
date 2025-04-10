@@ -30,7 +30,7 @@ const chartData = {
     ],
   };
 export default function HerniaPatientsChart() {
-  const [range, setRange] = React.useState('1M');
+//   const [range, setRange] = React.useState('1M');
 
 //   const handleRangeChange = (_, newRange) => {
 //     if (newRange !== null) {
@@ -40,15 +40,25 @@ export default function HerniaPatientsChart() {
 // const handleRangeChange = (newRange: '1M' | '3M' | '6M' | '1Y') => {
 //     setRange(newRange);
 //   };
+// const handleRangeChange = (
+//     event: React.MouseEvent<HTMLElement>,
+//     newRange: '1M' | '3M' | '6M' | '1Y' | null
+//   ) => {
+//     if (newRange !== null) {
+//       setRange(newRange);
+//     }
+//   };
+const [range, setRange] = React.useState<'1M' | '3M' | '6M' | '1Y'>('1M');
+
 const handleRangeChange = (
-    event: React.MouseEvent<HTMLElement>,
-    newRange: '1M' | '3M' | '6M' | '1Y' | null
-  ) => {
-    if (newRange !== null) {
-      setRange(newRange);
-    }
-  };
-  
+  event: React.MouseEvent<HTMLElement>,
+  newRange: '1M' | '3M' | '6M' | '1Y'
+) => {
+  if (newRange !== null) {
+    setRange(newRange);
+  }
+};
+
   return (
     <Card className="rounded-xl border border-solid mx-20">
       <CardContent>
