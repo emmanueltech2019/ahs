@@ -41,7 +41,7 @@ export default function HerniaPatientsChart() {
   };
 
   return (
-    <Card className="rounded-xl border border-solid mx-20">
+    <Card className="rounded-xl border border-solid mx-2">
       <CardContent>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="h6" fontWeight="bold">

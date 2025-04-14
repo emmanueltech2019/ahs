@@ -39,8 +39,8 @@ function page() {
         <p className='text-[#6B6B6B] py-5 w-[70%] md:w-[40%] m-auto'>How We help connect you to experienced and qualified specialists in their area </p>
 
         <div className="cards flex md:flex-row flex-col spcace-y-10 md:space-y-0 gap-7 bg-[#F4F4F4] text-left ">
-          <div className=' shadow-xl rounded-xl md:flex bg-white'>
-            <Image src={offerImg} alt='' className='md:w-[331px] h-[301px] rounded-xl ' />
+          <div className=' rounded-xl md:flex bg-white'>
+            <Image src={offerImg} alt='' className='md:w-[331px] h-[301px]  ' />
             <div className='text-[13px] md:text-[12px] p-3'>
               <ul className="list-disc ps-8 flex flex-col gap-3">
                 <li>
@@ -52,10 +52,10 @@ function page() {
               </ul>
             </div>
           </div>
-          <div className=' shadow-xl rounded-xl md:flex bg-white '>
-            <Image src={offerImg2} alt='' className='md:w-[331px] h-[301px] rounded-xl ' />
+          <div className='  md:flex bg-white '>
+            <Image src={offerImg2} alt='' className='md:w-[331px] h-[301px] ' />
             <div className='text-[13px] md:text-[12px] p-3'>
-              <ul className="list-disc ps-8 flex flex-col gap-3">
+              <ul className="list-disc ps-8 flex flex-col gap-3 items-center">
                 <li>
                 Detailed Profiles: Each specialist&apos; profile includes their credentials, areas of expertise, patient testimonials, and contact information, helping you to find the best match for your needs.
                 </li>

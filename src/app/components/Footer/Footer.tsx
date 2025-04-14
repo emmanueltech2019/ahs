@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
       className=" text-white p-8 relative bg-cover bg-center center h-fit"
       style={{ backgroundImage: 'url(https://res.cloudinary.com/wise-solution-inc/image/upload/v1719332763/pexels-pixabay-269077_1_hsaxys.png)' }}
     >
-      <div className=" bg-opacity-75 p-8">
+      <div className=" bg-opacity-75 md:p-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="text-center md:text-center">
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </div>
-          <div className="mt-8 text-left md:px-20 px-10 py-10 md:text-left">
+          <div className="mt-8 text-left md:px-20 md:px-10 px-2 md:py-10 py-3 pb-24 md:text-left">
             <p className="text-sm">
               <strong>Disclaimer:</strong> We are a medical marketing entity. We are not considered a medical practice, institution or hospital. Please know that email communication via our website may not be done through a secure platform. Although it is unlikely, there is a possibility that information you include in your submission can be intercepted and read by parties other than the intended recipient. To protect your confidential information, please do not include personal identifying information such as your birth date or personal medical information in any emails or website submissions you send to us.
             </p>

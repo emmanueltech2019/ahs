@@ -62,7 +62,7 @@ function Page() {
                 <div className='md:max-w-[85%] m-auto'>
 
 
-                    <div className='sm:flex justify-between gap-[7rem] items-baseline'>
+                    <div className='sm:flex justify-between md:gap-[7rem] items-baseline'>
                         <div className='sm:w-[40%]'>
                             <header className='text-[#449DD1] text-[20px] md:text-[30px] md:w-[100%] font-extrabold my-[1.5rem]'>
                                 <h1>Get in Touch</h1>
@@ -88,8 +88,8 @@ function Page() {
                             <div className='mr-10'>
                                 <iframe
                                     src={src}
-                                    width="400"
-                                    height="450"
+                                    width="360"
+                                    height="250"
                                     style={{ border: 0 }}
                                     allowFullScreen
                                     loading="lazy"
@@ -103,7 +103,7 @@ function Page() {
                             <header className='text-[#449DD1] text-[20px] md:text-[30px] m-auto font-extrabold my-[1.5rem]'>
                                 <h1>Email us</h1>
                             </header>
-                            <form className='grid gap-[2rem] p-[6rem] shadow-2xl rounded-[2rem]' onSubmit={handleSubmit}>
+                            <form className='grid gap-[2rem] p-5 md:p-0 shadow-1xl rounded-[2rem]' onSubmit={handleSubmit}>
                                 <div>
                                     <label className="text-[13.5px]" htmlFor="name">Name:</label><br />
                                     <input type="text" id='name' required value={name} onChange={(e)=>setName(e.target.value)} placeholder='Micheal Collin' className='outline-none border-[1px] border-[#0000006d] bg-transparent p-[1rem] w-full rounded-[10px]' />

@@ -1,6 +1,7 @@
 "use client"
-import React, { FormEvent, useState } from 'react';
-import { Icon } from '@iconify/react';
+import React, { FormEvent, useState, useRef, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import data from './data';
 import Link from 'next/link';
 import axios from 'axios';
@@ -65,6 +66,19 @@ export default function Home() {
       // setError(error.response?.data.message || 'An error occurred.');
     }
   };
+
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true });
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        scale: 1, // zoom out to normal size
+        transition: { duration: 1, ease: 'easeOut' },
+      });
+    }
+  }, [inView, controls]);
   return (
     <div>
       <Head>
@@ -102,7 +116,7 @@ export default function Home() {
         </div>
       </section> */}
       
-      <section className="hero relative overflow-hidden min-h-screen">
+      <section className=" relative overflow-hidden min-h-screen">
   {/* Background Video */}
   <video
     autoPlay
@@ -293,7 +307,7 @@ export default function Home() {
 
       <section className='get-inTouch relative mb-[7rem]'>
         <div className='md:max-w-[85%] m-auto p-4 md:pb-[4rem]'>
-          <div className="form bg-[#FFF] w-[450px] m-auto p-10 rounded-lg relative  top-[100px] md:left-[-30%] shadow-md">
+          <div className="form bg-[#FFF] md:w-[450px] m-auto p-10 rounded-lg relative  top-[100px] md:left-[-30%] shadow-md">
             <header className='text-center'>
               <h5 className='text-[#449DD1] font-bold text-[23px] md:text-[26px]'>Get In Touch</h5>
               <p>Improve the quality if your life</p>
@@ -390,18 +404,18 @@ export default function Home() {
         {/* <ChartMileStone/> */}
         <HerniaPatientsChart/>
       <section >
-        <div className='md:max-w-[85%] m-auto p-4 py-[6rem]'>
+        <div className='md:max-w-[100%] m-auto p-4 py-[6rem]'>
           <header>
-            <h4 className='uppercase text-[#449DD1] text-[30px] md:text-[30px] font-extrabold text-center w-[50%] md:w-[30%] m-auto my-[2rem]'>
+            <h4 className='uppercase text-[#449DD1] text-[30px] md:text-[30px] font-extrabold text-center w-[100%] md:w-[30%] m-auto my-[2rem]'>
             {data.city} HERNIA SPECIALISTS
             </h4>
 
           </header>
 
-          <div className="cards md:flex gap-7 my-10">
+          <div className="cards md:flex  gap-7 my-10">
             
             <div className=" flex items-center">
-            <div className='p-7 rounded-xl'>
+            <div className='md:p-7 rounded-xl'>
               <h5 className='text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4'>
                 How Do I Know If My Hernia Needs Surgery?
               </h5>
@@ -411,16 +425,38 @@ export default function Home() {
             </div>
 
             </div>
-            <div className='p-7 rounded-xl'>
-              <Image src={'https://res.cloudinary.com/wise-solution-inc/image/upload/v1744250052/ChatGPT_Image_Apr_10_2025_02_45_05_AM_ed46gd.png'} alt='Hernia Image' width={'2000'} height={'100'}/>
+            <div className='md:p-7 rounded-xl'>
+                  <motion.div
+              ref={ref}
+              initial={{ scale: 1.2 }} // initial zoomed-in
+              animate={controls}
+              className="overflow-hidden rounded-xl"
+            >
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Image
+                  src="https://res.cloudinary.com/wise-solution-inc/image/upload/v1744250052/ChatGPT_Image_Apr_10_2025_02_45_05_AM_ed46gd.png"
+                  alt="Hernia Image"
+                  width={'2000'}
+                  height={'100'}
+                  className="w-[2000] h-auto object-cover"
+                />
+              </motion.div>
+            </motion.div>
+
             </div>
+            {/* <div className='p-7 rounded-xl'>
+              <Image src={'https://res.cloudinary.com/wise-solution-inc/image/upload/v1744250052/ChatGPT_Image_Apr_10_2025_02_45_05_AM_ed46gd.png'} alt='Hernia Image' width={'2000'} height={'100'}/>
+            </div> */}
           </div>
-          <div className="cards md:flex gap-7">
+          <div className="cards flex flex-col-reverse md:flex-row  gap-7">
             
-          <div className='p-7 rounded-xl'>
+          <div className='md:p-7 rounded-xl'>
               <Image src={'https://res.cloudinary.com/wise-solution-inc/image/upload/v1744251241/ChatGPT_Image_Apr_10_2025_03_02_56_AM_1_vmbroo.png'} alt='Hernia Image' width={'2000'} height={'100'}/>
             </div>
-            <div className='p-7  rounded-xl'>
+            <div className='md:p-7  rounded-xl'>
               <h5 className='text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4'>
               How Long Does a Hernia Operation Take?
               </h5>
