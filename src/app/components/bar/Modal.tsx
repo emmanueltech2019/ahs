@@ -32,7 +32,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, footerB
           {speech?<TextToSpeech />:''}
           
           <div className="flex space-x-2">
-            {footerButtons.map(({ label, link }) => (
+            {footerButtons?.map(({ label, link }) => (
               <Link key={label} href={link} className="bg-blue-600 text-white px-3 py-2 rounded-md text-sm">
                 {label}
               </Link>
