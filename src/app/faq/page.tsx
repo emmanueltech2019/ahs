@@ -1,11 +1,13 @@
 import React from 'react'
 import Hero from '../components/hero/Hero'
 import Accordion from './components/Accordion'
+import FlyInSection from '../components/FlyInSection/FlyInSection'
 function page() {
     return (
         <div>
             <Hero title={'FAQ'} description={'Find answers to your most common questions and get the information you need quickly and easily'} />
 
+            <FlyInSection>
             <section className="questions">
                 <div className='md:max-w-[75%] m-auto p-4'>
                     <Accordion title={<h2 className='font-bold rounded-full'>What is a hernia?</h2>} answer={<div className='my-[2rem] text-[14px] flex flex-col gap-5 rounded-full' >
@@ -29,7 +31,6 @@ function page() {
                         <p>
                             A hernia is usually diagnosed through a physical examination by a specialist. In some cases, imaging tests such as an ultrasound, CT scan, or MRI may be needed to confirm the diagnosis and determine the extent of the hernia.
                         </p>
-
                     </div>
 
                     } />
@@ -96,6 +97,7 @@ function page() {
                 </div>
 
             </section>
+            </FlyInSection>
         </div>
     )
 }

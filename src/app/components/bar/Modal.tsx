@@ -7,11 +7,12 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
+  speech: boolean;
   children: React.ReactNode;
   footerButtons?: { label: string; link: string }[];
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, footerButtons = [] }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, footerButtons, speech = [] }) => {
   if (!isOpen) return null;
 
   return (
@@ -28,7 +29,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, footerB
 
         {/* Footer with Dynamic Buttons */}
         <footer className="mt-4 border-t pt-3 flex justify-between items-center">
-          <TextToSpeech />
+          {speech?<TextToSpeech />:''}
+          
           <div className="flex space-x-2">
             {footerButtons.map(({ label, link }) => (
               <Link key={label} href={link} className="bg-blue-600 text-white px-3 py-2 rounded-md text-sm">

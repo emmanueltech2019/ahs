@@ -2,10 +2,11 @@
 import data from '@/app/data';
 import Link from 'next/link';
 import React from 'react';
+import FlyInSection from '../FlyInSection/FlyInSection';
 
 const Footer: React.FC = () => {
   return (
-    <>
+    <FlyInSection>
     <div
       className=" text-white p-8 relative bg-cover bg-center center h-fit"
       style={{ backgroundImage: 'url(https://res.cloudinary.com/wise-solution-inc/image/upload/v1719332763/pexels-pixabay-269077_1_hsaxys.png)' }}
@@ -42,7 +43,7 @@ const Footer: React.FC = () => {
 
             </div>
           </div>
-    </>
+    </FlyInSection>
   );
 };
 

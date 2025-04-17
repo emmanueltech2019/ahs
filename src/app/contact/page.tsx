@@ -5,6 +5,7 @@ import Link from 'next/link'
 import data from '../data'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import FlyInSection from '../components/FlyInSection/FlyInSection'
 
 const Toast = Swal.mixin({
     toast: true,
@@ -64,13 +65,17 @@ function Page() {
 
                     <div className='sm:flex justify-between md:gap-[7rem] items-baseline'>
                         <div className='sm:w-[40%]'>
-                            <header className='text-[#449DD1] text-[20px] md:text-[30px] md:w-[100%] font-extrabold my-[1.5rem]'>
-                                <h1>Get in Touch</h1>
-                            </header>
-                            <p className='text-[14px] leading-[25px] font-[400]'>
-                                If you have any questions, require further assistance or want to book an appointment give us a call or send us a message.
-                            </p>
-
+                            <FlyInSection>
+                                <header className='text-[#449DD1] text-[20px] md:text-[30px] md:w-[100%] font-extrabold my-[1.5rem]'>
+                                    <h1>Get in Touch</h1>
+                                </header>
+                            </FlyInSection>
+                            <FlyInSection>
+                                <p className='text-[14px] leading-[25px] font-[400]'>
+                                    If you have any questions, require further assistance or want to book an appointment give us a call or send us a message.
+                                </p>
+                            </FlyInSection>
+                            <FlyInSection>
                             <div className='md:flex justify-between my-[2rem]'>
                                 <div className="email">
                                     <p className='text-[14px] leading-[25px]'>Email:</p>
@@ -85,6 +90,8 @@ function Page() {
                                     </Link>
                                 </div> */}
                             </div>
+
+                            </FlyInSection>
                             <div className='mr-10'>
                                 <iframe
                                     src={src}

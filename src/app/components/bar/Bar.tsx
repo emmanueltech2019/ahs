@@ -11,35 +11,31 @@ const ButtonBar: React.FC = () => {
       id: "pay",
       icon: CashOutline,
       label: "Pay Now",
-      content: "Payment options will be displayed here.",
-      footerButtons: [{ label: "Go to Payment", link: "/payment" }]
+      content: "",
+      footerButtons: [{ label: "Pay Now", link: "/payment" }],
+      speech:false
     },
     {
       id: "speech",
       icon: MicOutline,
       label: "Text to Speech",
-      content: "Convert text to speech.",
-      footerButtons: []
+      content: "",
+      footerButtons: [],
+      speech:true
     },
-    {
-      id: "appointment",
-      icon: CalendarOutline,
-      label: "Appointment",
-      content: "Schedule an appointment.",
-      footerButtons: [{ label: "Book Now", link: "/appointment" }]
-    },
-    {
-      id: "call",
-      icon: CallOutline,
-      label: "Call Now",
-      content: "Call support instantly.",
-      footerButtons: [{ label: "Dial Now", link: "tel:+1234567890" }]
-    }
+    // {
+    //   id: "call",
+    //   icon: CallOutline,
+    //   label: "Call Now",
+    //   content: "Call support instantly.",
+    //   footerButtons: [{ label: "Dial Now", link: "tel:+1234567890" }],
+    //   speech:false
+    // }
   ];
 
   return (
     <>
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 md:w-4/5 w-[60vw] bg-[#0478BE] text-white shadow-lg rounded-2xl p-4 flex justify-around z-[100]">
+      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 md:w-2/5 w-[60vw] bg-[#0478BE] text-white shadow-lg rounded-2xl p-4 flex justify-around z-[100]">
         {buttons.map(({ id, icon: Icon, label }) => (
           <button key={id} className="flex items-center space-x-2 " onClick={() => setOpenModal(id)}>
             <Icon color="#fff" height="25px" width="25px" />
@@ -48,8 +44,8 @@ const ButtonBar: React.FC = () => {
         ))}
       </div>
 
-      {buttons.map(({ id, label, content, footerButtons }) => (
-        <Modal key={id} isOpen={openModal === id} onClose={() => setOpenModal(null)} title={label} footerButtons={footerButtons}>
+      {buttons.map(({ id, label, content, footerButtons, speech }) => (
+        <Modal key={id} speech={speech} isOpen={openModal === id} onClose={() => setOpenModal(null)} title={label} footerButtons={footerButtons}>
           <p>{content}</p>
         </Modal>
       ))}
