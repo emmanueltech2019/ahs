@@ -19,15 +19,23 @@ import {
   AreaChart,
 } from 'recharts';
 
+// const rawChartData = [
+//   { date: 'Feb 1', value: 48000 },
+//   { date: 'Feb 10', value: 47000 },
+//   { date: 'Feb 20', value: 80720 },
+//   { date: 'Mar 1', value: 52000 },
+//   { date: 'Mar 10', value: 51000 },
+//   { date: 'Mar 20', value: 52000 },
+// ];
 const rawChartData = [
-  { date: 'Feb 1', value: 48000 },
-  { date: 'Feb 10', value: 47000 },
-  { date: 'Feb 20', value: 80720 },
-  { date: 'Mar 1', value: 52000 },
-  { date: 'Mar 10', value: 51000 },
-  { date: 'Mar 20', value: 52000 },
+  { date: '2015', value: 11400 },
+  { date: '2016', value: 18000 },
+  { date: '2017', value: 26800 },
+  { date: '2018', value: 32600 },
+  { date: '2019', value: 38900 },
+  { date: '2020', value: 47400 },
+  { date: '2021', value: 89000 },
 ];
-
 export default function HerniaPatientsChart() {
   const [range, setRange] = React.useState<'1M' | '3M' | '6M' | '1Y'>('1M');
 
@@ -61,9 +69,9 @@ export default function HerniaPatientsChart() {
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '16px 0' }}>
-          <Typography variant="h3" fontWeight="bold">
+          {/* <Typography variant="h3" fontWeight="bold">
             52,000
-          </Typography>
+          </Typography> */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Chip label="+23%" style={{ backgroundColor: '#fbbf24', color: '#000' }} />
             <Typography variant="body2">vs last month</Typography>

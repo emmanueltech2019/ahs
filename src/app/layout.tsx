@@ -5,7 +5,6 @@ import NavBar from "./components/Nav/NavBar";
 import Footer from "./components/Footer/Footer";
 import data from "./data";
 import Script from "next/script";
-import Bar from "./components/bar/Bar";
 
 const TawkTo = () => {
   return (
@@ -59,7 +58,7 @@ export default function RootLayout({
         <NavBar/>
         {children}
         <TawkTo/>
-        <Bar/>
+       
         <Footer/>
       </body>
     </html>

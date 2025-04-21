@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { CashOutline, CallOutline, CalendarOutline, DocumentTextOutline, MicOutline } from "react-ionicons";
+import { CardOutline, CallOutline, CalendarOutline, DocumentTextOutline, NewspaperOutline } from "react-ionicons";
 import Modal from "./Modal";
 
 const ButtonBar: React.FC = () => {
@@ -9,19 +9,21 @@ const ButtonBar: React.FC = () => {
   const buttons = [
     {
       id: "pay",
-      icon: CashOutline,
-      label: "Pay Now",
-      content: "",
-      footerButtons: [{ label: "Pay Now", link: "/payment" }],
-      speech:false
+      icon: CardOutline,
+      label: "Claim Page",
+      content: "Are you a doctor and can't find your page claim one now.",
+      footerButtons: [{ label: "Claim Now", link: "/map-ranking" }],
+      speech:false,
+      link:"/map-ranking"
     },
     {
       id: "speech",
-      icon: MicOutline,
-      label: "Text to Speech",
-      content: "",
-      footerButtons: [],
-      speech:true
+      icon: NewspaperOutline,
+      label: "Book an Appointment ",
+      content: "Do you need instant clarification? Book an appointment.",
+      footerButtons: [{ label: "Book Now", link: "https://calendly.com/jamesdominick/brand" }],
+      speech:false,
+      link:""
     },
     // {
     //   id: "call",
@@ -35,17 +37,17 @@ const ButtonBar: React.FC = () => {
 
   return (
     <>
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 md:w-2/5 w-[60vw] bg-[#0478BE] text-white shadow-lg rounded-2xl p-4 flex justify-around z-[100]">
+      <div className=" w-[60vw] bg-[#449DD1] text-white shadow-lg rounded-2xl p-4 flex justify-around z-[100]">
         {buttons.map(({ id, icon: Icon, label }) => (
-          <button key={id} className="flex items-center space-x-2 " onClick={() => setOpenModal(id)}>
+          <button key={id} className="flex items-center space-x-2 bg-[#449DD1]" onClick={() => setOpenModal(id)}>
             <Icon color="#fff" height="25px" width="25px" />
             <span className="hidden md:block">{label}</span>
           </button>
         ))}
       </div>
 
-      {buttons.map(({ id, label, content, footerButtons, speech }) => (
-        <Modal key={id} speech={speech} isOpen={openModal === id} onClose={() => setOpenModal(null)} title={label} footerButtons={footerButtons}>
+      {buttons.map(({ id, label, content, footerButtons, speech, link }) => (
+        <Modal key={id} speech={speech} link={link} isOpen={openModal === id} onClose={() => setOpenModal(null)} title={label} footerButtons={footerButtons}>
           <p>{content}</p>
         </Modal>
       ))}

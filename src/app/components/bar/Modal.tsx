@@ -8,11 +8,12 @@ interface ModalProps {
   onClose: () => void;
   title: string;
   speech: boolean;
+  link: string;
   children: React.ReactNode;
   footerButtons?: { label: string; link: string }[];
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, footerButtons, speech = [] }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, footerButtons, speech, link = [] }) => {
   if (!isOpen) return null;
 
   return (
@@ -33,7 +34,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, footerB
           
           <div className="flex space-x-2">
             {footerButtons?.map(({ label, link }) => (
-              <Link key={label} href={link} className="bg-blue-600 text-white px-3 py-2 rounded-md text-sm">
+              <Link key={label} href={link} className="bg-[#449DD1] text-white px-3 py-2 rounded-md text-sm">
                 {label}
               </Link>
             ))}

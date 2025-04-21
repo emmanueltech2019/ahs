@@ -47,9 +47,12 @@ const PricingCard: React.FC<PricingCardProps> = ({ title, price, description, fe
           </li>
         ))}
       </ul>
-      <button className={`absolute bottom-0 left-0 w-full py-2 px-4 mt-20 ${highlighted ? 'bg-black text-white' : 'bg-black text-white hover:bg-gray-700'}`}>
-        Contact Us
+      <a href='https://calendly.com/jamesdominick/brand'>
+
+      <button className={`absolute bottom-0 left-0 w-full py-2 px-4 mt-20 ${highlighted ? 'bg-[#FFF] text-[#449DD1]' : 'bg-[#449DD1] text-white hover:bg-gray-700'}`}>
+        Schedule Appointment
       </button>
+      </a>
       {
         true?<Modal
         open={open}
