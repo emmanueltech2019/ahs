@@ -53,7 +53,7 @@ export default function HerniaPatientsChart() {
       <CardContent>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="h6" fontWeight="bold">
-            Hernia Patients
+          da Vinci procedures in each year since 2015
           </Typography>
           <ToggleButtonGroup
             value={range}
