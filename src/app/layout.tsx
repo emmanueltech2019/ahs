@@ -56,7 +56,10 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <NavBar/>
+        <div className="overflow-x-hidden w-full">
         {children}
+
+        </div>
         <TawkTo/>
        
         <Footer/>

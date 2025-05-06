@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import logoImg from "./img/logo 1.png";
@@ -23,14 +23,34 @@ const NavBar: React.FC = () => {
     setModal(false);
     window.location.href = page;
   };
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div>
-      <section className="absolute w-full z-50">
+      {/* <section className="absolute w-full z-50"> */}
+      {/* <section className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/60 border-b border-white/20 shadow-md"> */}
+      <section
+  className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+    scrolled
+      ? "backdrop-blur-md bg-white/20 shadow-md border-b border-white/20"
+      : "bg-transparent"
+  }`}
+>
+
         <div className="md:w-[85%] m-auto p-4 overflow-hidden">
           <header className="flex justify-between items-center">
             <div className="logo">
               <Link href="/">
-                <Image src={data.logo} width={"100"} height={"100"} alt="alt" />
+                <Image src={data.logo} width={"130"} height={"100"} alt="alt" />
               </Link>
             </div>
             <div className="toggle/user flex items-center gap-6">
