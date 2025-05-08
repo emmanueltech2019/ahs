@@ -56,7 +56,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <NavBar/>
-        <div className="overflow-x-hidden w-full">
+        <div className="overflow-x-hidden w-screen">
         {children}
 
         </div>
