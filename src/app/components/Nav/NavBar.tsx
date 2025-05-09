@@ -39,26 +39,20 @@ const NavBar: React.FC = () => {
       {/* <section className="absolute w-full z-50"> */}
       {/* <section className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/60 border-b border-white/20 shadow-md"> */}
       <section
-  className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-    scrolled
-      ? "backdrop-blur-md bg-white/20 shadow-md border-b border-white/20"
-      : "bg-transparent"
-  }`}
->
-
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? "backdrop-blur-md bg-[#000]/60 shadow-md border-b border-[#439DD0]/10"
+            : "bg-transparent"
+        }`}
+      >
         <div className="md:w-[85%] m-auto p-4 overflow-hidden">
           <header className="flex justify-between items-center">
             <div className="logo">
               <Link href="/">
-                <Image src={data.logo} width={"130"} height={"100"} alt="alt" />
+                <Image src={data.logo} width={"150"} height={"100"} alt="alt" />
               </Link>
             </div>
             <div className="toggle/user flex items-center gap-6">
-              {/* <div className="search cursor-pointer">
-                        <Link href="/search">
-                        <Icon icon="ant-design:search-outlined" className='text-[30px] text-[#fff]'></Icon>
-                        </Link>
-                        </div> */}
               <div className="toggle/user flex items-center gap-6">
                 <div className="search cursor-pointer">
                   <Icon
@@ -75,9 +69,6 @@ const NavBar: React.FC = () => {
                       onClick={handleToggle}
                     ></Icon>
                   </div>
-                  {/* <div className="user"> */}
-                  {/* <Icon icon="lucide:user-round" className='text-[#2c2c2ca1] font-bold text-[26px] bg-[#adacac] rounded-full p-1'></Icon> */}
-                  {/* </div> */}
                 </div>
               </div>
             </div>

@@ -346,7 +346,7 @@ export default function Home() {
       <FlyInSection>
         <section className="get-inTouch relative mb-[7rem]">
           <div className="md:max-w-[85%] m-auto p-4 md:pb-[4rem]">
-            <div className="form bg-[#FFF] md:w-[450px] m-auto p-10 rounded-lg relative  top-[100px] md:left-[-30%] shadow-md">
+            <div className="form bg-[#FFF] md:w-[550px] m-auto p-10 rounded-lg relative  top-[100px] md:left-[-30%] shadow-md">
               <FlyInSection>
                 <header className="text-center">
                   <h5 className="text-[#449DD1] font-bold text-[23px] md:text-[26px]">
@@ -522,9 +522,15 @@ export default function Home() {
         <div className="md:max-w-[100%] m-auto p-4 py-[6rem]">
           <FlyInSection>
             <header>
-              <h4 className="uppercase text-[#449DD1] text-[30px] md:text-[45px] font-extrabold text-center w-[100%] md:w-[30%] m-auto my-[2rem]">
+              {/* <h4 className="uppercase text-[#449DD1] text-[30px] md:text-[45px] font-extrabold text-center w-[100%] md:w-[30%] m-auto my-[2rem] flex">
                 {data.city} HERNIA SPECIALISTS
-              </h4>
+              </h4> */}
+              {/* <h4 className="uppercase text-[#449DD1] text-[clamp(1.5rem,5vw,2.5rem)] font-extrabold text-center w-full whitespace-nowrap mx-auto my-[2rem]">
+  {data.city} HERNIA SPECIALISTS
+</h4> */}
+<h4 className="uppercase text-[#449DD1] text-[clamp(1.5rem,5vw,2.5rem)] font-extrabold text-center w-full mx-auto my-[2rem]">
+  <span className="block md:inline">{data.city}</span> HERNIA SPECIALISTS
+</h4>
             </header>
           </FlyInSection>
           <div className="cards md:flex  gap-7 my-10">

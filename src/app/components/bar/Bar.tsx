@@ -37,9 +37,9 @@ const ButtonBar: React.FC = () => {
 
   return (
     <>
-      <div className=" w-[60vw] bg-[#449DD1] text-white shadow-lg rounded-2xl p-4 flex justify-around z-[100]">
+      <div className="w-[60vw]  text-white shadow-lg rounded-2xl p-4 flex justify-around z-[100]">
         {buttons.map(({ id, icon: Icon, label }) => (
-          <button key={id} className="flex items-center space-x-2 bg-[#449DD1]" onClick={() => setOpenModal(id)}>
+          <button key={id} className="flex items-center space-x-2 bg-[#449DD1] px-5 py-2 rounded-xl" onClick={() => setOpenModal(id)}>
             <Icon color="#fff" height="25px" width="25px" />
             <span className="hidden md:block">{label}</span>
           </button>
