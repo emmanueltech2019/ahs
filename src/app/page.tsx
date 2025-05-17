@@ -303,7 +303,7 @@ export default function Home() {
             </div>
 
             <div className="mt-[1rem]">
-              <div className="img h-[180px] md:h-[300px] overflow-hidden ">
+              {/* <div className="img h-[180px] md:h-[300px] overflow-hidden ">
                 <FlyInSection>
                   <iframe
                     className="md:h-[320px] md:w-[590px] w-screen h-[50vh]"
@@ -314,8 +314,19 @@ export default function Home() {
                     allowFullScreen
                   ></iframe>
                 </FlyInSection>
-                {/* <Image src={img1} className=' object-cover h-full w-full scale-[180%] md:scale-[100%]' alt="hernia" /> */}
-              </div>
+              </div> */}
+<div className="img overflow-hidden">
+  <FlyInSection>
+    <iframe
+      className="w-screen h-[50vh] md:h-[320px] md:w-[590px]"
+      src="https://www.youtube.com/embed/Oxar0r6-HEU"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </FlyInSection>
+</div>
 
               <div className="text p-4 pl-4 font-[500] md:w-[80%]">
                 <h5 className="font-bold text-[18px] ">Condition</h5>
@@ -619,7 +630,7 @@ export default function Home() {
                   <h5 className="text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4">
                     How Do I Know If My Hernia Needs Surgery?
                   </h5>
-                  <p className="text-[13px] md:text-[16px]">
+                  <p className="text-[13px] md:text-[16px] pb-4 md:pb-0">
                     A hernia is a common but frequently misunderstood condition.
                     You may have a hernia if you have swelling and a bulge that
                     is able to be “pushed back” into your abdomen. If it
