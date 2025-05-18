@@ -9,7 +9,9 @@
     background-repeat: no-repeat;
     object-fit: cover;
 }
-
+*{
+  overflow-x: hidden;
+}
 /* .get-inTouch{
     background-image: url(https://res.cloudinary.com/wise-solution-inc/image/upload/v1746748767/b986888464c645707f67637cb71f73cb01bb75a8_akgzcv.jpg);
     background-size: cover;
