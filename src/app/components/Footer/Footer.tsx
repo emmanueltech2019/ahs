@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                     and support you need.
                   </p>
                   <Link href={`mailto:info@${data.domain}`}>
-                    <button className="border-solid border-white border-2 text-white px-4 py-2 rounded-full ">
+                    <button className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-4 py-2 rounded-full shadow-md hover:bg-white/20 transition-all duration-300">
                       Send Email
                     </button>
                   </Link>

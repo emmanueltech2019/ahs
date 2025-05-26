@@ -315,18 +315,18 @@ export default function Home() {
                   ></iframe>
                 </FlyInSection>
               </div> */}
-<div className="img overflow-hidden">
-  <FlyInSection>
-    <iframe
-      className="w-screen h-[50vh] md:h-[320px] md:w-[590px]"
-      src="https://www.youtube.com/embed/Oxar0r6-HEU"
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-  </FlyInSection>
-</div>
+              <div className="img overflow-hidden">
+                <FlyInSection>
+                  <iframe
+                    className="w-screen h-[50vh] md:h-[320px] md:w-[590px]"
+                    src="https://www.youtube.com/embed/Oxar0r6-HEU"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+                </FlyInSection>
+              </div>
 
               <div className="text p-4 pl-4 font-[500] md:w-[80%]">
                 <h5 className="font-bold text-[18px] ">Condition</h5>
@@ -520,7 +520,7 @@ export default function Home() {
           <div className="hernias">
             <div className="inguinal md:flex flex-row-reverse gap-4">
               <FlyInSection>
-                <div className="md:w-[50vw] md:h-[50vh]">
+                <div className="md:w-[50vw] md:h-[40vh]">
                   <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1719851207/inguinal-hernia_p6n6lc.png" />
                 </div>
               </FlyInSection>
@@ -551,7 +551,7 @@ export default function Home() {
 
             <div className="inguinal my-[4rem] md:flex gap-4">
               <FlyInSection>
-                <div className="md:w-[50vw] md:h-[50vh]">
+                <div className="md:w-[50vw] md:h-[40vh]">
                   <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1719852288/haital-hernia_j1nqeu.png" />
                 </div>
               </FlyInSection>
@@ -580,7 +580,7 @@ export default function Home() {
 
             <div className="inguinal md:flex flex-row-reverse gap-4">
               <FlyInSection>
-                <div className="md:w-[50vw] md:h-[50vh]">
+                <div className="md:w-[50vw] md:h-[40vh]">
                   <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1720021228/umblical-removebg-preview_pupiag.png" />
                 </div>
               </FlyInSection>
@@ -670,7 +670,7 @@ export default function Home() {
           <div className="cards flex flex-col-reverse md:flex-row  gap-7">
             <FlyInSection>
               <div className="md:p-7 rounded-xl">
-              <motion.div
+                <motion.div
                   ref={ref}
                   initial={{ scale: 1.2 }} // initial zoomed-in
                   animate={controls}
@@ -680,17 +680,17 @@ export default function Home() {
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                   >
-                <Image
-                  src={
-                    "https://res.cloudinary.com/wise-solution-inc/image/upload/v1744251241/ChatGPT_Image_Apr_10_2025_03_02_56_AM_1_vmbroo.png"
-                  }
-                  alt="Hernia Image"
-                  width={"2000"}
-                  height={"100"}
-                  className="w-[2000] h-auto object-cover"
-                />
-                 </motion.div>
-                 </motion.div>
+                    <Image
+                      src={
+                        "https://res.cloudinary.com/wise-solution-inc/image/upload/v1744251241/ChatGPT_Image_Apr_10_2025_03_02_56_AM_1_vmbroo.png"
+                      }
+                      alt="Hernia Image"
+                      width={"2000"}
+                      height={"100"}
+                      className="w-[2000] h-auto object-cover"
+                    />
+                  </motion.div>
+                </motion.div>
               </div>
             </FlyInSection>
             <div className="flex items-center">

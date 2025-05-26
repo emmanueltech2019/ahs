@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .hero{
-    background-image: url(./components/assets/da-vinci-vse-synchroseal-hero.avif);
+    background-image: url(./components/assets/davinci-software-hero.jpg);
     background-size: cover;
     background-position: right -130px top;
     background-repeat: no-repeat;
@@ -12,10 +12,12 @@
 *{
   overflow-x: hidden;
 }
+
 /* .get-inTouch{
     background-image: url(https://res.cloudinary.com/wise-solution-inc/image/upload/v1746748767/b986888464c645707f67637cb71f73cb01bb75a8_akgzcv.jpg);
     background-size: cover;
 } */
+
 .get-inTouch {
   position: relative;
   background-image: url(https://res.cloudinary.com/wise-solution-inc/image/upload/v1746748767/b986888464c645707f67637cb71f73cb01bb75a8_akgzcv.jpg);

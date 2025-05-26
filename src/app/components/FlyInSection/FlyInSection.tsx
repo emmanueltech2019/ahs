@@ -1,4 +1,4 @@
-// components/FlyInSection.tsx
+// FlyInSection.tsx
 'use client';
 
 import { motion } from 'framer-motion';
@@ -30,13 +30,14 @@ export default function FlyInSection({
   };
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
-      variants={variants}
-    >
-      {children}
-    </motion.div>
+    <div ref={ref}>
+      <motion.div
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+        variants={variants}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 }

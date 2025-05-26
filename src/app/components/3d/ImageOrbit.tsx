@@ -282,7 +282,7 @@ const ImagePlane: React.FC<{ imageUrl: string }> = ({ imageUrl }) => {
 const ImageOrbit: React.FC<ImageOrbitProps> = ({ imageUrl }) => {
   return (
     <div className="w-full h-full">
-      <Canvas>
+      <Canvas camera={{ position: [0, 0, 5.0  ], fov: 50 }}>
         <Suspense fallback={null}>
           <ambientLight />
           <ImagePlane imageUrl={imageUrl} />
