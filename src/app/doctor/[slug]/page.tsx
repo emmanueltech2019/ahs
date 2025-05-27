@@ -104,7 +104,7 @@ function Page() {
       <section className="doctor bg-[#449DD1] text-white">
         <div className="md:max-w-[85%] m-auto pt-[1rem] p-4 pb-[2rem] ">
           <FlyInSection>
-            <header className="bg-white/10 backdrop-blur-md border border-white/30 w-[95%] lg:w-[50%] m-auto left-[11px] lg:left-[24%] flex gap-1 md:gap-[1rem] md:items-center shadow-lg absolute top-[20vh] md:top-[100px] py-3 px-[1rem] text-white rounded-xl">
+            <header className="bg-white/10 backdrop-blur-md border border-white/30 w-[95%] lg:w-[50%] m-auto left-[11px] lg:left-[24%] flex gap-1 md:gap-[1rem] md:items-center shadow-lg absolute top-[15vh] md:top-[100px] py-3 px-[1rem] text-white rounded-xl">
               <div className="doc-img w-[130px] md:w-[230px] h-full md:h-[230px]">
                 <Image
                   src={doctor?.image ? doctor.image : ""}
@@ -240,7 +240,7 @@ function Page() {
               >
                 About Dr. {doctor?.lastName}
               </h1>
-              <p className="text-[23px] font-[500] leading-[8mm] md:w-[100%] text-center">
+              <p className="md:text-[23px] text-[18px] font-[500] leading-[8mm] md:w-[100%] text-center">
                 {doctor?.bio}
               </p>
             </div>
