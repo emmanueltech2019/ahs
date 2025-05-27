@@ -11,7 +11,7 @@ const Hero: React.FC<HeroProps> = ({ title, description }) => {
     <div>
               <section className="hero bg-[#00000058] bg-blend-overlay">
         <div className="backdrop-blur-sm">
-          <div className='md:max-w-[85%] m-auto pt-[7rem] p-4 pb-[6rem] min-h-[40vh]'>
+          <div className='md:max-w-[85%] m-auto pt-[7rem] p-4 pb-[6rem] min-h-[50vh]'>
             <header className='mt-[6.5rem]'>
               <FlyInSection>
                 <h1 className='md:w-[85%] text-[37px] md:text-[60px] font-bold text-[#fff] leading-10 md:leading-[16mm]'>
