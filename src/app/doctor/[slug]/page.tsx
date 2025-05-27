@@ -251,7 +251,7 @@ function Page() {
         <div className=" flex items-center">
           <FlyInSection>
             <div className="md:p-7 rounded-xl">
-              <h5 className="text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4">
+              <h5 className="text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4 capitalize">
                 Learn More About {doctor?.keyphrase}
               </h5>
               <p className="text-[13px] md:text-[16px] pb-4 md:pb-0">
