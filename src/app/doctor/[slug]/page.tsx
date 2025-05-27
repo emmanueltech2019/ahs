@@ -256,7 +256,7 @@ function Page() {
               </h5>
               <p className="text-[13px] md:text-[16px] pb-4 md:pb-0">
                 {doctor?.keyphrase} is an important topic for anyone concerned
-                about hernia-related conditions. Whether you're exploring
+                about hernia-related conditions. Whether you&apos;re exploring
                 treatment options, experiencing symptoms, or seeking expert
                 surgical care, our team is here to provide trusted information
                 and support every step of the way.
