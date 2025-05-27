@@ -473,7 +473,7 @@ function Page() {
         </div>
       </section>
 
-      <section className="reviews py-10">
+      {/* <section className="reviews py-10">
   <div className="max-w-[90%] mx-auto p-4 py-8">
     <h2 className="text-xl font-semibold mb-6">Reviews</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -499,8 +499,49 @@ function Page() {
       ))}
     </div>
   </div>
-</section>
-
+</section> */}
+<section className="reviews">
+        <div className="md:max-w-[85%] m-auto p-4 py-[2rem]">
+          <Swiper className="px-[2rem]"
+            modules={[Pagination, A11y]}
+            spaceBetween={20}
+            loop={true}
+            pagination={{ clickable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+            }}
+          >
+            {doctor?.reviews.map((review, index) => (
+              <SwiperSlide className="p-3 md:p-[4rem] shadow-lg rounded-xl my-[3rem] max-h-[400px] min-h-[400px] py-5 overflow-scroll" key={index}>
+                <div className="rating flex items-center text-[18px]">
+                  <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
+                  <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
+                  <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
+                  <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
+                  <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
+                </div>
+                <div className="review text-[14px] md:text-[18px]">
+                  <h2 className="font-bold my-[.5rem]">{review?.name}</h2>
+                  <p>{review?.review}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
     </div>
   );
 }
