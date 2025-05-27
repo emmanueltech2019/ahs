@@ -302,7 +302,7 @@ function Page() {
               <h2 className="text-[#449DD1] font-bold text-[23px] md:text-[26px]">
                 Get In Touch
               </h2>
-              <p className="my-6 text-white">With Dr. {doctor?.lastName}</p>
+              <p className="my-6 text-white capitalize">With Dr. {doctor?.lastName}</p>
             </header>
             <form className="bg-transparent grid grid-cols-2 gap-4">
               <div className="col-span-2 border border-white/20 p-3 rounded-xl bg-white/5">
