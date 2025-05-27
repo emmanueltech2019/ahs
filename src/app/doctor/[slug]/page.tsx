@@ -240,7 +240,7 @@ function Page() {
               >
                 About Dr. {doctor?.lastName}
               </h1>
-              <p className="md:text-[23px] text-[18px] font-[500] leading-[8mm] md:w-[100%] text-center">
+              <p className="md:text-[23px] text-[15px] font-[500] leading-[8mm] md:w-[100%] text-center">
                 {doctor?.bio}
               </p>
             </div>
