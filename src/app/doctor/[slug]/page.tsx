@@ -133,19 +133,19 @@ function Page() {
       <section className="doctor bg-[#449DD1] text-white">
         <div className="md:max-w-[85%] m-auto pt-[1rem] p-4 pb-[2rem] ">
           <FlyInSection>
-            <header className="bg-white/10 backdrop-blur-md border border-white/30 w-[95%] lg:w-[50%] m-auto left-[11px] lg:left-[24%] flex gap-1 md:gap-[1rem] md:items-center shadow-lg absolute top-[15vh] md:top-[100px] py-3 px-[1rem] text-white rounded-xl">
+            <header className="bg-white/10 backdrop-blur-md border border-white/30 w-[95%] lg:w-[50%] m-auto left-[11px] lg:left-[24%] flex gap-3 md:gap-[100px] md:items-center shadow-lg absolute top-[15vh] md:top-[100px] py-3 px-[1rem] text-white rounded-xl">
               <div className="doc-img w-[130px] md:w-[230px] h-full md:h-[230px]">
                 <Image
                   src={doctor?.image ? doctor.image : ""}
                   width="200"
                   height="200"
-                  className="rounded-full w-[300] h-[300]"
+                  className="md:rounded-full rounded w-[300] h-[300]"
                   alt="Doctor Image"
                 />
               </div>
-              <div className="doc-stat flex flex-col gap-[1rem]">
+              <div className="doc-stat flex flex-col gap-[5px]">
                 <header className="leading-[6mm] md:leading-[10mm]">
-                  <h5 className="text-[#449DD1] font-bold text-[20px] md:text-[30px] capitalize">
+                  <h5 className="text-[#449DD1] font-bold text-[18px] md:text-[30px] capitalize">
                     {doctor?.firstName} {doctor?.lastName}, MD
                   </h5>
                   <p className="font-[500] flex items-center font-bold p-0 m-0 md:text-[15px]">
@@ -175,23 +175,23 @@ function Page() {
                   <div className="flex items-center md:text-[35px]">
                     <Icon
                       icon="material-symbols:star"
-                      className="text-[35px] text-[#eae249]"
+                      className="text-[30px] text-[#eae249]"
                     />
                     <Icon
                       icon="material-symbols:star"
-                      className="text-[35px] text-[#eae249]"
+                      className="text-[30px] text-[#eae249]"
                     />
                     <Icon
                       icon="material-symbols:star"
-                      className="text-[35px] text-[#eae249]"
+                      className="text-[30px] text-[#eae249]"
                     />
                     <Icon
                       icon="material-symbols:star"
-                      className="text-[35px] text-[#eae249]"
+                      className="text-[30px] text-[#eae249]"
                     />
                     <Icon
                       icon="material-symbols:star"
-                      className="text-[35px] text-[#eae249]"
+                      className="text-[30px] text-[#eae249]"
                     />
                   </div>
                 </div>
