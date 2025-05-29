@@ -33,6 +33,7 @@ import ImageOrbit from "../../components/3d/ImageOrbit";
 import axios from "axios";
 import { usePathname } from "next/navigation";
 import FlyInSection from "@/app/components/FlyInSection/FlyInSection";
+import Head from "next/head";
 
 function Page() {
   const imageMap = {
@@ -100,6 +101,34 @@ function Page() {
   }, [inView, controls]);
   return (
     <div className="w-screen">
+
+
+ <Head>
+      <title>Dr. {doctor?.firstName} {doctor?.lastName} | Austin Hernia Specialist</title>
+      <meta name="description" content="Learn about a leading hernia surgeon in Austin, TX. Specializing in inguinal, hiatal, and umbilical hernia repairs with advanced techniques." />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charSet="UTF-8" />
+      <meta name="author" content="Austin Hernia Specialists" />
+      <meta name="robots" content="index, follow" />
+
+      {/* Open Graph for social sharing */}
+      <meta property="og:title" content="Austin Hernia Specialist" />
+      <meta property="og:description" content="Meet a hernia surgeon in Austin specializing in advanced hernia repair techniques." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="" />
+      <meta property="og:image" content="" />
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content=" Austin Hernia Specialist" />
+      <meta name="twitter:description" content="Meet a hernia surgeon in Austin, TX. Inguinal, hiatal, and laparoscopic hernia repairs." />
+      <meta name="twitter:image" content="" />
+
+      {/* Canonical URL */}
+      {/* <link rel="canonical" href="https://austinherniaspecialists.com/doctor/vineet-choudhry" /> */}
+    </Head>
+
+
       <Hero title={""} description={""} />
       <section className="doctor bg-[#449DD1] text-white">
         <div className="md:max-w-[85%] m-auto pt-[1rem] p-4 pb-[2rem] ">
@@ -437,6 +466,13 @@ function Page() {
       </section>
 
       <section className="reviews showscrool">
+        <FlyInSection>
+            <header className="py-[1rem]">
+              <h2 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold text-center md:w-90%] m-auto pt-20">
+                Patient Testimonials
+              </h2>
+            </header>
+          </FlyInSection>
         <div className="md:max-w-[85%] m-auto p-4 py-[2rem] showscrool">
           <Swiper
             className="px-[2rem] showscrool"
