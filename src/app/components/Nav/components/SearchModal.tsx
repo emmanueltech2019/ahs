@@ -78,7 +78,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ modal, setModal }) => {
   const getDoctorDetails  = async () =>{
     await axios({
       method:"get",
-      url:"http://localhost:4000/user/get-doctor"
+      url:"https://14hsdashboard.chop-life.com/user/get-doctor"
     })
     .then((res)=>{
       console.log("Worked.....", res.data[0])

@@ -77,8 +77,8 @@ const NavBar: React.FC = () => {
           <nav
             className={
               !toggle
-                ? " absolute w-[400px] m-auto flex flex-col justify-center items-center text-center shadow-md bg-[#ffff] shadow-[#08080847] p-4 rounded-3xl transition-all ease-in-out duration-500 scale-[20%] top-[-300px] sm:right-40"
-                : "fixed md:w-[345px] w-[95vw] h-[35vh] z-[10000] m-auto md:m-0 flex flex-col justify-center items-center text-center shadow-md bg-[#ffff] shadow-[#08080847] p-4 rounded-3xl transition-all ease-in-out duration-500 scale-100 top-20 sm:right-0"
+                ? " absolute w-[400px] m-auto flex flex-col justify-center items-center text-center shadow-md bg-white/10 backdrop-blur-md border border-white/30 shadow-[#08080847] p-4 rounded-3xl transition-all ease-in-out duration-500 scale-[20%] top-[-300px] sm:right-40"
+                : "fixed md:w-[345px] w-[95vw] h-[35vh] z-[10000] m-auto md:m-0 flex flex-col justify-center items-center text-center shadow-md bg-white/10 backdrop-blur-md border border-white/30 text-white shadow-[#08080847] p-4 rounded-3xl transition-all ease-in-out duration-500 scale-100 top-20 sm:right-0"
             }
           >
             <ul className="text-center flex flex-col my-3 gap-3 w-[70%]">

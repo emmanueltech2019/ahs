@@ -43,7 +43,7 @@ export default function Home() {
     try {
       const response = await axios
         .post(
-          "https://api-14hs.devemmy.com/appointments",
+          "https://14hsdashboard.chop-life.com/appointments",
           { name, email, type, phone, brand: data.brand },
           {
             headers: {

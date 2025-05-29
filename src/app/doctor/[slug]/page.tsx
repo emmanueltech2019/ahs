@@ -233,14 +233,14 @@ function Page() {
             </div>
           )}
           <FlyInSection>
-            <div className="info gap-8 justify-between md:mt-5 md:w-[80%] m-auto text-justify py-10">
+            <div className="info gap-8 justify-between md:mt-5 md:w-[80%] m-auto text-justify py-8">
               <h1
-                className={`text-[#fff] font-bold text-[20px] md:text-[30px] text-center capitalize
+                className={`text-[#fff] font-bold text-[20px] md:text-[30px] text-center capitalize py-5
                    ${doctor?.paid ? "" : "md:pt-2"}`}
               >
                 About Dr. {doctor?.lastName}
               </h1>
-              <p className="md:text-[23px] text-[15px] font-[500] leading-[8mm] md:w-[100%] text-center">
+              <p className="md:text-[18px] text-[15px] font-[500] leading-[8mm] md:w-[100%] text-center">
                 {doctor?.bio}
               </p>
             </div>
@@ -250,11 +250,11 @@ function Page() {
       <div className="cards md:flex  gap-7 my-10 md:w-[60vw] w-[90vw] mx-auto">
         <div className=" flex items-center">
           <FlyInSection>
-            <div className="md:p-7 rounded-xl">
-              <h5 className="text-[#449DD1] text-[20px] md:text-[30px] font-extrabold  md:w-[80%] my-4 capitalize">
+            <div className="md:p-7 rounded-xl text-center">
+              <h5 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold  md:w-[100%] my-4 capitalize ">
                 Learn More About {doctor?.keyphrase}
               </h5>
-              <p className="text-[13px] md:text-[16px] pb-4 md:pb-0">
+              <p className="text-[13px] md:text-[16px] pb-4 md:pb-0 text-center">
                 {doctor?.keyphrase} is an important topic for anyone concerned
                 about hernia-related conditions. Whether you&apos;re exploring
                 treatment options, experiencing symptoms, or seeking expert
@@ -265,12 +265,12 @@ function Page() {
           </FlyInSection>
         </div>
       </div>
-      <section className="specialties">
+      <section className="specialties py-5">
         <div className="md:max-w-[85%] m-auto p-4">
           <header>
             <FlyInSection>
-              <h1 className="text-[#449DD1] text-[20px] md:text-[30px] font-extrabold text-center">
-                Specialties
+              <h1 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold text-center capitalize py-5">
+                Dr. {doctor?.lastName} Specialties
               </h1>
             </FlyInSection>
           </header>
@@ -406,20 +406,20 @@ function Page() {
         <div className="md:max-w-[85%] m-auto p-4">
           <FlyInSection>
             <header className="py-[3rem]">
-              <h2 className="text-[#449DD1] text-[20px] md:text-[50px] font-extrabold text-center md:w-90%] m-auto">
+              <h2 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold text-center md:w-90%] m-auto pt-20">
                 Do You Need A Hernia Specialist?
               </h2>
             </header>
           </FlyInSection>
           <div className="hernias">
             <FlyInSection>
-              <div className="inguinal md:flex flex-row-reverse gap-4">
+              <div className="inguinal md:flex flex-row-reverse gap-4 justify-center align-center items-center">
                 <div className="md:w-[50vw] md:h-[40vh]">
                   <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1719851207/inguinal-hernia_p6n6lc.png" />
                 </div>
 
                 <div className="text md:w-[50%]">
-                  <h2 className="my-4 font-bold text-[25px]">
+                  <h2 className="my-4 font-bold text-[25px] text-[#449DD1]">
                     Inguinal Hernia
                   </h2>
                   <p className="font-[500] text-[#000000a4]">
@@ -434,12 +434,12 @@ function Page() {
               </div>
             </FlyInSection>
              <FlyInSection>
-              <div className="inguinal my-[4rem] md:flex gap-4">
+              <div className="inguinal my-[4rem] md:flex gap-4 justify-center align-center items-center">
                 <div className="md:w-[50vw] md:h-[40vh]">
                   <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1719852288/haital-hernia_j1nqeu.png" />
                 </div>
                 <div className="text md:w-[50%]">
-                  <h2 className="my-4 font-bold text-[25px]">Hiatal Hernia</h2>
+                  <h2 className="my-4 font-bold text-[25px] text-[#449DD1]">Hiatal Hernia</h2>
                   <p className="font-[500] text-[#000000a4]">
                     Hiatal hernias typically occur later in life and cause a
                     myriad of symptoms. Symptoms may include heartburn, nausea,
@@ -452,12 +452,12 @@ function Page() {
               </div>
              </FlyInSection>
               <FlyInSection>
-              <div className="inguinal md:flex flex-row-reverse gap-4">
+              <div className="inguinal md:flex flex-row-reverse gap-4 justify-center align-center items-center">
                 <div className="md:w-[50vw] md:h-[40vh]">
                   <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1720021228/umblical-removebg-preview_pupiag.png" />
                 </div>
                 <div className="text md:w-[50%]">
-                  <h2 className="my-4 font-bold text-[25px]">Umbilical Hernia</h2>
+                  <h2 className="my-4 font-bold text-[25px] text-[#449DD1]">Umbilical Hernia</h2>
                   <p className="font-[500] text-[#000000a4]">
                     Umbilical hernias are one of the most common hernias
                     encountered. They are naturally occurring hernias, common in
@@ -500,9 +500,9 @@ function Page() {
     </div>
   </div>
 </section> */}
-<section className="reviews">
-        <div className="md:max-w-[85%] m-auto p-4 py-[2rem]">
-          <Swiper className="px-[2rem]"
+<section className="reviews showscrool">
+        <div className="md:max-w-[85%] m-auto p-4 py-[2rem] showscrool">
+          <Swiper className="px-[2rem] showscrool"
             modules={[Pagination, A11y]}
             spaceBetween={20}
             loop={true}
@@ -525,7 +525,7 @@ function Page() {
             }}
           >
             {doctor?.reviews.map((review, index) => (
-              <SwiperSlide className="p-3 md:p-[4rem] shadow-lg rounded-xl my-[3rem] max-h-[400px] min-h-[400px] py-5 overflow-scroll" key={index}>
+              <SwiperSlide className="p-3 md:p-[4rem] shadow-lg rounded-xl my-[3rem] max-h-[400px] min-h-[400px] py-5 overflow-scroll " key={index}>
                 <div className="rating flex items-center text-[18px]">
                   <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
                   <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
