@@ -382,6 +382,9 @@ function Page() {
                     term hiatal comes from hiatus (or opening), specifically the
                     esophageal hiatus.
                   </p>
+                   <a target="_black"  href="https://www.medtronic.com/en-us/healthcare-professionals/specialties/hernia-repair-surgery.html#aq=%40pagetype%3D%22product-model%22&cq=%40medicalspecialties%3D%22Hernia%20repair%20surgery%22%20OR%20%40ontology_isa%3D%22Hernia%20repair%20surgery%22" type="submit" className="w-full">
+                    Learn More
+                  </a>
                 </div>
               </div>
              </FlyInSection>
@@ -400,6 +403,9 @@ function Page() {
                     umbilical cord previously passed through and acts as a natural
                     site of weakness in the abdominal wall.
                   </p>
+                   <a target="_black"  href="https://my.clevelandclinic.org/health/diseases/umbilical-hernia" type="submit" className="w-full">
+                    Learn More
+                  </a>
                 </div>
               </div>
               </FlyInSection>
