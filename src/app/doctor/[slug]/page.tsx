@@ -163,7 +163,7 @@ function Page() {
                   <Icon icon="ph:seal-check-fill" className="text-[#379c4a]" />{" "}
                   Certified
                 </p> */}
-                  <p className="flex items-center gap-2 md:text-[18px]">
+                  <p className="flex items-center gap-2 md:text-[18px] text-[8px]">
                     <Icon icon="mdi:briefcase" className="text-[#fff]" />{" "}
                     Accepting new patients
                   </p>
