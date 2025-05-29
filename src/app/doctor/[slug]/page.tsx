@@ -99,7 +99,7 @@ function Page() {
     }
   }, [inView, controls]);
   return (
-    <div>
+    <div className="w-screen">
       <Hero title={""} description={""} />
       <section className="doctor bg-[#449DD1] text-white">
         <div className="md:max-w-[85%] m-auto pt-[1rem] p-4 pb-[2rem] ">

@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center w-screen py-10 bg-[radial-gradient(circle_at_center,_#ffffff,_#DBDADA)]">
+        <div className="flex justify-center items-center py-10 ">
           <FlyInSection>
             <Bar />
           </FlyInSection>

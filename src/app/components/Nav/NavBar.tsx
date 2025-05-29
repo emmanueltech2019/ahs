@@ -73,7 +73,6 @@ const NavBar: React.FC = () => {
               </div>
             </div>
           </header>
-
           <nav
             className={
               !toggle
