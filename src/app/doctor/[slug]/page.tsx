@@ -263,7 +263,7 @@ function Page() {
           </div>
         </div>
       </section>
-      
+
       <section className="get-inTouch relative py-24 flex justify-center items-center">
         <div className="w-full max-w-4xl px-4">
           <div className="form bg-white/10 backdrop-blur-md border border-white/30 w-full max-w-xl mx-auto p-6 rounded-lg shadow-lg">
@@ -359,21 +359,28 @@ function Page() {
                     the abdomen into the scrotum predisposes males to have a
                     natural weakness in the groin where inguinal hernias occur.
                   </p>
-                    <div className="col-span-2 p-3 w-fit px-10 my-10 rounded-full text-center text-white bg-[#449DD1] hover:bg-[#3784b3] transition-all duration-300">
-                  <a target="_black"  href="https://www.intuitive.com/en-us/patients/procedures/general-surgery/hernia-surgery" type="submit" className="w-full">
-                    Learn More
-                  </a>
-                </div>
+                  <div className="col-span-2 p-3 w-fit px-10 my-10 rounded-full text-center text-white bg-[#449DD1] hover:bg-[#3784b3] transition-all duration-300">
+                    <a
+                      target="_black"
+                      href="https://www.intuitive.com/en-us/patients/procedures/general-surgery/hernia-surgery"
+                      type="submit"
+                      className="w-full"
+                    >
+                      Learn More
+                    </a>
+                  </div>
                 </div>
               </div>
             </FlyInSection>
-             <FlyInSection>
+            <FlyInSection>
               <div className="inguinal my-[4rem] md:flex gap-4 justify-center align-center items-center">
                 <div className="md:w-[50vw] md:h-[40vh]">
                   <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1719852288/haital-hernia_j1nqeu.png" />
                 </div>
                 <div className="text md:w-[50%]">
-                  <h4 className="my-4 font-bold text-[25px] text-[#449DD1]">Hiatal Hernia</h4>
+                  <h4 className="my-4 font-bold text-[25px] text-[#449DD1]">
+                    Hiatal Hernia
+                  </h4>
                   <p className="font-[500] text-[#000000a4]">
                     Hiatal hernias typically occur later in life and cause a
                     myriad of symptoms. Symptoms may include heartburn, nausea,
@@ -382,47 +389,63 @@ function Page() {
                     term hiatal comes from hiatus (or opening), specifically the
                     esophageal hiatus.
                   </p>
-                   <a target="_black"  href="https://www.medtronic.com/en-us/healthcare-professionals/specialties/hernia-repair-surgery.html#aq=%40pagetype%3D%22product-model%22&cq=%40medicalspecialties%3D%22Hernia%20repair%20surgery%22%20OR%20%40ontology_isa%3D%22Hernia%20repair%20surgery%22" type="submit" className="w-full">
-                    Learn More
-                  </a>
+                  <div className="col-span-2 p-3 w-fit px-10 my-10 rounded-full text-center text-white bg-[#449DD1] hover:bg-[#3784b3] transition-all duration-300">
+                    <a
+                      target="_black"
+                      href="https://www.medtronic.com/en-us/healthcare-professionals/specialties/hernia-repair-surgery.html#aq=%40pagetype%3D%22product-model%22&cq=%40medicalspecialties%3D%22Hernia%20repair%20surgery%22%20OR%20%40ontology_isa%3D%22Hernia%20repair%20surgery%22"
+                      type="submit"
+                      className="w-full"
+                    >
+                      Learn More
+                    </a>
+                  </div>
                 </div>
               </div>
-             </FlyInSection>
-              <FlyInSection>
+            </FlyInSection>
+            <FlyInSection>
               <div className="inguinal md:flex flex-row-reverse gap-4 justify-center align-center items-center">
                 <div className="md:w-[50vw] md:h-[40vh]">
                   <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1720021228/umblical-removebg-preview_pupiag.png" />
                 </div>
                 <div className="text md:w-[50%]">
-                  <h4 className="my-4 font-bold text-[25px] text-[#449DD1]">Umbilical Hernia</h4>
+                  <h4 className="my-4 font-bold text-[25px] text-[#449DD1]">
+                    Umbilical Hernia
+                  </h4>
                   <p className="font-[500] text-[#000000a4]">
                     Umbilical hernias are one of the most common hernias
                     encountered. They are naturally occurring hernias, common in
-                    all ages from infants to the elderly. They occur at the navel,
-                    also known as the umbilicus. This is the site that the
-                    umbilical cord previously passed through and acts as a natural
-                    site of weakness in the abdominal wall.
+                    all ages from infants to the elderly. They occur at the
+                    navel, also known as the umbilicus. This is the site that
+                    the umbilical cord previously passed through and acts as a
+                    natural site of weakness in the abdominal wall.
                   </p>
-                   <a target="_black"  href="https://my.clevelandclinic.org/health/diseases/umbilical-hernia" type="submit" className="w-full">
-                    Learn More
-                  </a>
+                  <div className="col-span-2 p-3 w-fit px-10 my-10 rounded-full text-center text-white bg-[#449DD1] hover:bg-[#3784b3] transition-all duration-300">
+                    <a
+                      target="_black"
+                      href="https://my.clevelandclinic.org/health/diseases/umbilical-hernia"
+                      type="submit"
+                      className="w-full"
+                    >
+                      Learn More
+                    </a>
+                  </div>
                 </div>
               </div>
-              </FlyInSection>
+            </FlyInSection>
           </div>
         </div>
       </section>
 
-      
-<section className="reviews showscrool">
+      <section className="reviews showscrool">
         <div className="md:max-w-[85%] m-auto p-4 py-[2rem] showscrool">
-          <Swiper className="px-[2rem] showscrool"
+          <Swiper
+            className="px-[2rem] showscrool"
             modules={[Pagination, A11y]}
             spaceBetween={20}
             loop={true}
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
+            onSlideChange={() => console.log("slide change")}
             breakpoints={{
               640: {
                 slidesPerView: 2,
@@ -439,13 +462,31 @@ function Page() {
             }}
           >
             {doctor?.reviews.map((review, index) => (
-              <SwiperSlide className="p-3 md:p-[4rem] shadow-lg rounded-xl my-[3rem] max-h-[400px] min-h-[400px] py-5 overflow-scroll " key={index}>
+              <SwiperSlide
+                className="p-3 md:p-[4rem] shadow-lg rounded-xl my-[3rem] max-h-[400px] min-h-[400px] py-5 overflow-scroll "
+                key={index}
+              >
                 <div className="rating flex items-center text-[18px]">
-                  <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
-                  <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
-                  <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
-                  <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
-                  <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
+                  <Icon
+                    icon="material-symbols:star"
+                    className="text-[#eae249]"
+                  ></Icon>
+                  <Icon
+                    icon="material-symbols:star"
+                    className="text-[#eae249]"
+                  ></Icon>
+                  <Icon
+                    icon="material-symbols:star"
+                    className="text-[#eae249]"
+                  ></Icon>
+                  <Icon
+                    icon="material-symbols:star"
+                    className="text-[#eae249]"
+                  ></Icon>
+                  <Icon
+                    icon="material-symbols:star"
+                    className="text-[#eae249]"
+                  ></Icon>
                 </div>
                 <div className="review text-[14px] md:text-[18px]">
                   <h6 className="font-bold my-[.5rem]">{review?.name}</h6>
