@@ -116,9 +116,9 @@ function Page() {
               </div>
               <div className="doc-stat flex flex-col gap-[1rem]">
                 <header className="leading-[6mm] md:leading-[10mm]">
-                  <h1 className="text-[#449DD1] font-bold text-[20px] md:text-[30px] capitalize">
+                  <h5 className="text-[#449DD1] font-bold text-[20px] md:text-[30px] capitalize">
                     {doctor?.firstName} {doctor?.lastName}, MD
-                  </h1>
+                  </h5>
                   <p className="font-[500] flex items-center font-bold p-0 m-0 md:text-[15px]">
                     General Surgeon
                   </p>
@@ -181,46 +181,6 @@ function Page() {
               </div>
             </header>
           </FlyInSection>
-
-          {/* <header className="bg-[#fff] w-[95%] lg:w-[50%] m-auto left-[11px] lg:left-[24%] flex gap-1 md:gap-[1rem] md:items-center shadow-md absolute top-[230px] py-3 px-[1rem] text-[#000]">
-            <div className="doc-img w-[130px] md:w-[230px] h-[90px] md:h-[230px]">
-              <Image 
-                src={doctor?.image ? doctor.image : ''} 
-                width="200" height={"200"} className="rounded-full w-[300] h-[300]" alt="alt" 
-              />
-            </div>
-            <div className="doc-stat flex flex-col gap-[1rem]">
-              <header className="leading-[6mm] md:leading-[10mm]">
-                <h1 className="text-[#449DD1] font-bold text-[20px] md:text-[25px] capitalize">{doctor?.firstName} {doctor?.lastName}, MD</h1>
-                <p className="font-[500] flex items-center p-0 m-0 md:text-[15px]">Surgeon</p>
-              </header>
-              <div className="rating flex">
-                <small className="text-[7px] md:text-[12px] font-bold pr-3">Rating 5.0</small>
-                <div className="flex items-center md:text-[15px]">
-                  <Icon icon="material-symbols:star" className="text-[10px] text-[#eae249]"></Icon>
-                  <Icon icon="material-symbols:star" className="text-[10px] text-[#eae249]"></Icon>
-                  <Icon icon="material-symbols:star" className="text-[10px] text-[#eae249]"></Icon>
-                  <Icon icon="material-symbols:star" className="text-[10px] text-[#eae249]"></Icon>
-                  <Icon icon="material-symbols:star" className="text-[10px] text-[#eae249]"></Icon>
-                </div>
-              </div>
-              <div className="location">
-                <p className="text-[7px] md:text-[11px]">Surgeon in {data.city}, {data.state}</p>
-              </div>
-              <div className="flex gap-[2rem]">
-                <p className="flex items-center gap-2 md:text-[18px]"><Icon icon="ph:seal-check-fill" className="text-[#379c4a]"></Icon>Certified</p>
-                <p className="flex items-center gap-2 md:text-[18px]"><Icon icon="mdi:briefcase" className="text-[#747272]"></Icon>Accepting new patients</p>
-              </div>
-              {doctor?.paid && (
-                <>
-                  <hr />
-                  <div>
-                    <p className="text-[12px]"><PlaceOutlinedIcon />2217 Park Bend Dr Suite 220, Austin, TX 78758, United States</p>
-                  </div>
-                </>
-              )}
-            </div>
-          </header> */}
           {doctor?.paid && (
             <div className="md:pt-[12vh] pt-[1vh] flex justify-center bg-[#449DD1]">
               <iframe
@@ -234,12 +194,12 @@ function Page() {
           )}
           <FlyInSection>
             <div className="info gap-8 justify-between md:mt-5 md:w-[80%] m-auto text-justify py-8">
-              <h1
+              <h4
                 className={`text-[#fff] font-bold text-[20px] md:text-[30px] text-center capitalize py-5
                    ${doctor?.paid ? "" : "md:pt-2"}`}
               >
                 About Dr. {doctor?.lastName}
-              </h1>
+              </h4>
               <p className="md:text-[18px] text-[15px] font-[500] leading-[8mm] md:w-[100%] text-center">
                 {doctor?.bio}
               </p>
@@ -251,9 +211,9 @@ function Page() {
         <div className=" flex items-center">
           <FlyInSection>
             <div className="md:p-7 rounded-xl text-center">
-              <h5 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold  md:w-[100%] my-4 capitalize ">
+              <h1 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold  md:w-[100%] my-4 capitalize ">
                 Learn More About {doctor?.keyphrase}
-              </h5>
+              </h1>
               <p className="text-[13px] md:text-[16px] pb-4 md:pb-0 text-center">
                 {doctor?.keyphrase} is an important topic for anyone concerned
                 about hernia-related conditions. Whether you&apos;re exploring
@@ -269,9 +229,9 @@ function Page() {
         <div className="md:max-w-[85%] m-auto p-4">
           <header>
             <FlyInSection>
-              <h1 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold text-center capitalize py-5">
+              <h2 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold text-center capitalize py-5">
                 Dr. {doctor?.lastName} Specialties
-              </h1>
+              </h2>
             </FlyInSection>
           </header>
 
@@ -293,9 +253,9 @@ function Page() {
                       icon="material-symbols:health-metrics"
                       className="text-[40px] text-[#fff]"
                     />
-                    <h2 className="text-[20px] text-[#fff] font-[500] text-center">
+                    <span className="text-[20px] text-[#fff] font-[500] text-center">
                       {specialty}
-                    </h2>
+                    </span>
                   </div>
                 </FlyInSection>
               </div>
@@ -303,46 +263,15 @@ function Page() {
           </div>
         </div>
       </section>
-      {/* <section className='get-inTouch relative mb-[7rem]'>
-        <div className='md:max-w-[85%] m-auto p-4 md:pb-[4rem]'>
-          <div className="form bg-[#FFF] w-[350px] m-auto p-4 rounded-lg relative top-[100px] md:left-[-30%] shadow-md">
-            <header className='text-center'>
-              <h2 className='text-[#449DD1] font-bold text-[23px] md:text-[26px]'>Get In Touch</h2>
-              <p className="my-6">With Dr. {doctor?.lastName}</p>
-            </header>
-            <form className='bg-transparent grid grid-cols-2 gap-4'>
-              <div className="name col-span-2 border p-3 rounded-xl">
-                <input type="text" placeholder='Name' className='w-full outline-none border-0' />
-              </div>
-              <div className="email border p-3 rounded-xl col-span-1">
-                <input type="email" placeholder='Email' className='w-full outline-none border-0' />
-              </div>
-              <div className="phone border p-3 rounded-xl col-span-1">
-                <input type="tel" placeholder='Phone' className='w-full outline-none border-0' />
-              </div>
-              <div className='col-span-2 border p-3 rounded-xl'>
-                <select name="reason-for-contact" id="reason" title="res" className='outline-none border-none'>
-                  <option value="reason1">Reason for contact</option>
-                  <option value="surgery-appointment">Surgery Appointment</option>
-                  <option value="in-house-appointment">In-house Appointment</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div className="submit col-span-2 border p-3 rounded-full text-center text-[#fff] bg-[#449DD1]">
-                <button>SUBMIT</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section> */}
+      
       <section className="get-inTouch relative py-24 flex justify-center items-center">
         <div className="w-full max-w-4xl px-4">
           <div className="form bg-white/10 backdrop-blur-md border border-white/30 w-full max-w-xl mx-auto p-6 rounded-lg shadow-lg">
             <header className="text-center">
               <FlyInSection>
-                <h2 className="text-[#449DD1] font-bold text-[23px] md:text-[26px]">
+                <h5 className="text-[#449DD1] font-bold text-[23px] md:text-[26px]">
                   Get In Touch
-                </h2>
+                </h5>
                 <p className="my-6 text-white capitalize">
                   With Dr. {doctor?.lastName}
                 </p>
@@ -406,9 +335,9 @@ function Page() {
         <div className="md:max-w-[85%] m-auto p-4">
           <FlyInSection>
             <header className="py-[3rem]">
-              <h2 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold text-center md:w-90%] m-auto pt-20">
+              <h3 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold text-center md:w-90%] m-auto pt-20">
                 Do You Need A Hernia Specialist?
-              </h2>
+              </h3>
             </header>
           </FlyInSection>
           <div className="hernias">
@@ -419,9 +348,9 @@ function Page() {
                 </div>
 
                 <div className="text md:w-[50%]">
-                  <h2 className="my-4 font-bold text-[25px] text-[#449DD1]">
+                  <h4 className="my-4 font-bold text-[25px] text-[#449DD1]">
                     Inguinal Hernia
-                  </h2>
+                  </h4>
                   <p className="font-[500] text-[#000000a4]">
                     Inguinal hernias are the most common type of hernia
                     encountered. They occur in women but occur more commonly in
@@ -439,7 +368,7 @@ function Page() {
                   <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1719852288/haital-hernia_j1nqeu.png" />
                 </div>
                 <div className="text md:w-[50%]">
-                  <h2 className="my-4 font-bold text-[25px] text-[#449DD1]">Hiatal Hernia</h2>
+                  <h4 className="my-4 font-bold text-[25px] text-[#449DD1]">Hiatal Hernia</h4>
                   <p className="font-[500] text-[#000000a4]">
                     Hiatal hernias typically occur later in life and cause a
                     myriad of symptoms. Symptoms may include heartburn, nausea,
@@ -457,7 +386,7 @@ function Page() {
                   <ImageOrbit imageUrl="https://res.cloudinary.com/wise-solution-inc/image/upload/v1720021228/umblical-removebg-preview_pupiag.png" />
                 </div>
                 <div className="text md:w-[50%]">
-                  <h2 className="my-4 font-bold text-[25px] text-[#449DD1]">Umbilical Hernia</h2>
+                  <h4 className="my-4 font-bold text-[25px] text-[#449DD1]">Umbilical Hernia</h4>
                   <p className="font-[500] text-[#000000a4]">
                     Umbilical hernias are one of the most common hernias
                     encountered. They are naturally occurring hernias, common in
@@ -473,33 +402,7 @@ function Page() {
         </div>
       </section>
 
-      {/* <section className="reviews py-10">
-  <div className="max-w-[90%] mx-auto p-4 py-8">
-    <h2 className="text-xl font-semibold mb-6">Reviews</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {doctor?.reviews.map((review, index) => (
-        <div
-          key={`${review?.name}-${index}`}
-          className="p-4 shadow-lg rounded-xl bg-white flex flex-col h-full"
-        >
-          <div className="rating flex items-center text-yellow-400 mb-2">
-            {[...Array(5)].map((_, i) => (
-              <Icon
-                key={i}
-                icon="material-symbols:star"
-                className="text-[#eae249]"
-              />
-            ))}
-          </div>
-          <div className="review text-sm flex flex-col flex-grow">
-            <h3 className="font-bold mb-2 text-base">{review?.name}</h3>
-            <p className="text-gray-700 text-xs">{review?.review}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section> */}
+      
 <section className="reviews showscrool">
         <div className="md:max-w-[85%] m-auto p-4 py-[2rem] showscrool">
           <Swiper className="px-[2rem] showscrool"
@@ -534,7 +437,7 @@ function Page() {
                   <Icon icon="material-symbols:star" className="text-[#eae249]"></Icon>
                 </div>
                 <div className="review text-[14px] md:text-[18px]">
-                  <h2 className="font-bold my-[.5rem]">{review?.name}</h2>
+                  <h6 className="font-bold my-[.5rem]">{review?.name}</h6>
                   <p>{review?.review}</p>
                 </div>
               </SwiperSlide>

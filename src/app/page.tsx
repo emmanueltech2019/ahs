@@ -97,37 +97,7 @@ export default function Home() {
           content="qtF6bh1d2Fs5IN5P9-UIymEDB64u8AuQyVBbWI6dNB8"
         />
       </Head>
-      {/* <section className="hero bg-[#00000058] bg-blend-overlay">
-        <div className="backdrop-blur-sm">
-          <div className='md:max-w-[85%] m-auto pt-[7rem] p-4 pb-[6rem] min-h-[100vh]'>
-            <header className='mt-[6.5rem]'>
-              <h1 className='md:w-[85%] text-[37px] md:text-[60px] font-bold text-[#fff] leading-10 md:leading-[18mm]'>
-                Find your <br className='md:hidden' />
-                Hernia<br className='hidden md:block' />Specialists in {data.city}, {data.state}
-              </h1>
-
-              <p className='text-[#f4f4f4] md:text-[18px] md:w-[40%] my-[1.4rem]'>
-                Your trusted destination for
-                premier hernia care in {data.city} 
-                {''} and Surrounding Areas.
-              </p>
-            </header>
-
-            <div className="buttons flex justify-between gap-3 text-center mt-[6rem] md:w-[40%]">
-                <div className="about-us bg-[#fff] p-2 py-3 font-bold rounded-full w-full">
-              <Link href={'/about'} >
-                  <button>About Us</button>
-              </Link>
-                </div>
-                <div className="contact-us bg-[#449DD1] text-[#fff] p-2 py-3 font-bold rounded-full w-full">
-              <Link href={'/contact'} >
-                  <button>Contact Us</button>
-              </Link>
-                </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      
 
       <section className=" relative overflow-hidden min-h-screen">
         {/* Background Video */}
