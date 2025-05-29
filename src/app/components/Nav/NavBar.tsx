@@ -82,13 +82,13 @@ const NavBar: React.FC = () => {
           >
             <ul className="text-center flex flex-col my-3 gap-3 w-[70%]">
               <li
-                className="rounded-full p-2 hover:border border-[#000000] cursor-pointer"
+                className="rounded-full p-2 hover:border border-[#fff] cursor-pointer"
                 onClick={() => handleNavigation("/about")}
               >
                 About Us
               </li>
               <li
-                className="rounded-full p-2 hover:border border-[#000000] cursor-pointer"
+                className="rounded-full p-2 hover:border border-[#fff] cursor-pointer"
                 onClick={() => handleNavigation("/faq")}
               >
                 FAQ
