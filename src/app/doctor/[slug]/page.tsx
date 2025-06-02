@@ -101,45 +101,53 @@ function Page() {
   }, [inView, controls]);
   return (
     <div className="w-screen">
+      <Head>
+        <title>
+          Dr. {doctor?.firstName} {doctor?.lastName} | Austin Hernia Specialist
+        </title>
+        <meta
+          name="description"
+          content="Learn about a leading hernia surgeon in Austin, TX. Specializing in inguinal, hiatal, and umbilical hernia repairs with advanced techniques."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
+        <meta name="author" content="Austin Hernia Specialists" />
+        <meta name="robots" content="index, follow" />
 
+        {/* Open Graph for social sharing */}
+        <meta property="og:title" content="Austin Hernia Specialist" />
+        <meta
+          property="og:description"
+          content="Meet a hernia surgeon in Austin specializing in advanced hernia repair techniques."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
 
- <Head>
-      <title>Dr. {doctor?.firstName} {doctor?.lastName} | Austin Hernia Specialist</title>
-      <meta name="description" content="Learn about a leading hernia surgeon in Austin, TX. Specializing in inguinal, hiatal, and umbilical hernia repairs with advanced techniques." />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="UTF-8" />
-      <meta name="author" content="Austin Hernia Specialists" />
-      <meta name="robots" content="index, follow" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content=" Austin Hernia Specialist" />
+        <meta
+          name="twitter:description"
+          content="Meet a hernia surgeon in Austin, TX. Inguinal, hiatal, and laparoscopic hernia repairs."
+        />
+        <meta name="twitter:image" content="" />
 
-      {/* Open Graph for social sharing */}
-      <meta property="og:title" content="Austin Hernia Specialist" />
-      <meta property="og:description" content="Meet a hernia surgeon in Austin specializing in advanced hernia repair techniques." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="" />
-      <meta property="og:image" content="" />
-
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content=" Austin Hernia Specialist" />
-      <meta name="twitter:description" content="Meet a hernia surgeon in Austin, TX. Inguinal, hiatal, and laparoscopic hernia repairs." />
-      <meta name="twitter:image" content="" />
-
-      {/* Canonical URL */}
-      {/* <link rel="canonical" href="https://austinherniaspecialists.com/doctor/vineet-choudhry" /> */}
-    </Head>
-
+        {/* Canonical URL */}
+        {/* <link rel="canonical" href="https://austinherniaspecialists.com/doctor/vineet-choudhry" /> */}
+      </Head>
 
       <Hero title={""} description={""} />
-      <section className="doctor bg-[#449DD1] text-white">
+      <section className="doctor text-[#449DD1] bg-gradient-to-r from-[#d4d4d4] via-white to-[#d4d4d4] text-black">
         <div className="md:max-w-[85%] m-auto pt-[1rem] p-4 pb-[2rem] ">
           <FlyInSection>
-            <header className="bg-white/10 backdrop-blur-md border border-white/30 w-[95%] lg:w-[50%] m-auto left-[11px] lg:left-[24%] flex gap-3 md:gap-[100px] md:items-center shadow-lg absolute top-[15vh] md:top-[100px] py-3 px-[1rem] text-white rounded-xl">
+            <header className="bg-white/10 backdrop-blur-md border border-white/30 w-[95%] lg:w-[60%] m-auto left-[11px] lg:left-[20%] md:h-[30vh] h-[40vh] md:flex gap-3 md:gap-[100px] md:items-center shadow-lg absolute top-[15vh] md:top-[20vh] py-3 px-[1rem] text-white rounded-xl">
               <div className="doc-img w-[130px] md:w-[230px] h-full md:h-[230px]">
                 <Image
                   src={doctor?.image ? doctor.image : ""}
-                  width="200"
-                  height="200"
-                  className="md:rounded-full rounded w-[300] h-[300]"
+                  width="350"
+                  height="350"
+                  className="md:rounded-full rounded w-[400] h-[400]"
                   alt="Doctor Image"
                 />
               </div>
@@ -224,7 +232,7 @@ function Page() {
           <FlyInSection>
             <div className="info gap-8 justify-between md:mt-5 md:w-[80%] m-auto text-justify py-8">
               <h4
-                className={`text-[#fff] font-bold text-[20px] md:text-[30px] text-center capitalize py-5
+                className={`text-[#449DD1] font-bold text-[20px] md:text-[30px] text-center capitalize py-5
                    ${doctor?.paid ? "" : "md:pt-2"}`}
               >
                 About Dr. {doctor?.lastName}
@@ -236,6 +244,11 @@ function Page() {
           </FlyInSection>
         </div>
       </section>
+      {/* <div className="bg-gradient-to-r from-[#d4d4d4] via-white to-[#d4d4d4] p-10 rounded-lg shadow-lg">
+        <h1 className="text-center text-xl font-bold text-black">
+          Shiny Gradient
+        </h1>
+      </div> */}
       <div className="cards md:flex  gap-7 my-10 md:w-[60vw] w-[90vw] mx-auto">
         <div className=" flex items-center">
           <FlyInSection>
@@ -467,12 +480,12 @@ function Page() {
 
       <section className="reviews showscrool">
         <FlyInSection>
-            <header className="py-[1rem]">
-              <h2 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold text-center md:w-90%] m-auto pt-20">
-                Patient Testimonials
-              </h2>
-            </header>
-          </FlyInSection>
+          <header className="py-[1rem]">
+            <h2 className="text-[#449DD1] text-[20px] md:text-[35px] font-extrabold text-center md:w-90%] m-auto pt-20">
+              Patient Testimonials
+            </h2>
+          </header>
+        </FlyInSection>
         <div className="md:max-w-[85%] m-auto p-4 py-[2rem] showscrool">
           <Swiper
             className="px-[2rem] showscrool"
