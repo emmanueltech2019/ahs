@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/Nav/NavBar";
 import Footer from "./components/Footer/Footer";
+import Footer2 from "./components/Footer2/Footer";
+
 import data from "./data";
 import Script from "next/script";
 
@@ -60,9 +62,9 @@ export default function RootLayout({
         {children}
 
         </div>
-
        
         <Footer/>
+        <Footer2/>
       </body>
     </html>
   );

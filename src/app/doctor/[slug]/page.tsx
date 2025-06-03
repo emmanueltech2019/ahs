@@ -141,12 +141,12 @@ function Page() {
       <section className="doctor text-[#449DD1] bg-gradient-to-r from-[#d4d4d4] via-white to-[#d4d4d4] text-black">
         <div className="md:max-w-[85%] m-auto pt-[1rem] p-4 pb-[2rem] ">
           <FlyInSection>
-            <header className="bg-white/10 backdrop-blur-md border border-white/30 w-[95%] lg:w-[60%] m-auto left-[11px] lg:left-[20%] md:h-[30vh] h-[40vh] md:flex gap-3 md:gap-[100px] md:items-center shadow-lg absolute top-[15vh] md:top-[20vh] py-3 px-[1rem] text-white rounded-xl">
-              <div className="doc-img w-[130px] md:w-[230px] h-full md:h-[230px]">
+            <header className="bg-white/10 backdrop-blur-md border border-white/30 w-[95%] lg:w-[60%] m-auto left-[11px] lg:left-[20%] md:h-[30vh] h-[30vh] flex gap-3 md:gap-[100px] md:items-center shadow-lg absolute top-[20vh] md:top-[20vh] py-3 px-[1rem] text-white rounded-xl  items-center justify-center">
+              <div className="doc-img w-[130px] md:w-[230px] h-full md:h-[230px] my-auto flex justify-center items-center">
                 <Image
                   src={doctor?.image ? doctor.image : ""}
-                  width="350"
-                  height="350"
+                  width="300"
+                  height="300"
                   className="md:rounded-full rounded w-[400] h-[400]"
                   alt="Doctor Image"
                 />
@@ -545,6 +545,10 @@ function Page() {
             ))}
           </Swiper>
         </div>
+      </section>
+
+      <section className="bg-white h-[40vh] text-center">
+        <h1>Payment Section</h1>
       </section>
     </div>
   );

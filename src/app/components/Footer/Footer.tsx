@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
             <Bar />
           </FlyInSection>
         </div>
-        <div className="mt-8 text-left md:px-20 md:px-10 px-2 md:py-10 py-3 pb-24 md:text-left">
+        <div className="mt-8 text-left md:px-20 md:px-10 px-2 md:py-10 py-3 pb-24 md:text-left hidden">
           <p className="text-sm">
             <strong>Disclaimer:</strong> We are a medical marketing entity. We
             are not considered a medical practice, institution or hospital.
