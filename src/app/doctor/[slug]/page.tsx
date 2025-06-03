@@ -401,7 +401,7 @@ function Page() {
                     the abdomen into the scrotum predisposes males to have a
                     natural weakness in the groin where inguinal hernias occur.
                   </p>
-                  <div className="col-span-2 p-3 w-fit px-10 my-10 rounded-full text-center text-white bg-[#449DD1] hover:bg-[#3784b3] transition-all duration-300">
+                  <div className="col-span-2 p-3 w-fit px-10 my-10 rounded-full text-center  text-white bg-[#449DD1] hover:bg-[#3784b3] transition-all duration-300 flex justify-center items-center">
                     <a
                       target="_black"
                       href="https://www.intuitive.com/en-us/patients/procedures/general-surgery/hernia-surgery"

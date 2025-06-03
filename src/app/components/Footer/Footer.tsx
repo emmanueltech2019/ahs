@@ -9,6 +9,11 @@ const Footer: React.FC = () => {
   return (
     <>
       <FlyInSection>
+        <div className="flex justify-center items-center py-10 ">
+          <FlyInSection>
+            <Bar />
+          </FlyInSection>
+        </div>
         <div
           className=" text-white p-8 relative bg-cover bg-center center h-fit"
           style={{
@@ -37,11 +42,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center py-10 ">
-          <FlyInSection>
-            <Bar />
-          </FlyInSection>
-        </div>
+        
         <div className="mt-8 text-left md:px-20 md:px-10 px-2 md:py-10 py-3 pb-24 md:text-left hidden">
           <p className="text-sm">
             <strong>Disclaimer:</strong> We are a medical marketing entity. We
