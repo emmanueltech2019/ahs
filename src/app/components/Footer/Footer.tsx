@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
           </p>
           <div className="md:flex  justify-between text-center md:text-left">
             <p className="text-sm mt-4">
-              © 2024 {data.brand} All rights reserved.
+              © 2025 {data.brand} All rights reserved.
             </p>
             <div className="flex justify-around md:justify-between space-x-4 mt-2">
               <a href="#" className="text-sm">
